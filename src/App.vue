@@ -1,33 +1,58 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const name = ref("");
 const email = ref("");
 const message = ref("");
 
-// Project images from assets/portfolio
-const projects = [
-	{
-		title: "Doors & Entrances",
-		img: new URL("./assets/portfolio/doors1.jpeg", import.meta.url).href,
-	},
-	{
-		title: "Roof & Fascia",
-		img: new URL("./assets/portfolio/fascia1.png", import.meta.url).href,
-	},
-	{
-		title: "Residential Retrofit",
-		img: new URL("./assets/portfolio/house1.jpg", import.meta.url).href,
-	},
-	{
-		title: "Refurbishment",
-		img: new URL("./assets/portfolio/ref1.jpg", import.meta.url).href,
-	},
-	{
-		title: "Windows Installation",
-		img: new URL("./assets/portfolio/windows1.jpeg", import.meta.url).href,
-	},
-];
+// Dynamically import all images from the portfolio folder and auto-generate captions
+// Vite will resolve these at build time. We use { eager: true, as: 'url' } to get file URLs.
+// @ts-ignore - import.meta.glob types are environment-specific
+const imageModules = import.meta.glob("./assets/portfolio/*", {
+	eager: true,
+	as: "url",
+}) as Record<string, string>;
+
+function niceTitleFromFilename(path: string) {
+	const parts = path.split("/").pop()?.split(".")?.[0] || path;
+	const cleaned = parts.replace(/\d+/g, "").replace(/[-_]+/g, " ").trim();
+	return cleaned
+		.split(" ")
+		.filter(Boolean)
+		.map((w) => {
+			const s = String(w || "");
+			if (!s) return "";
+			return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+		})
+		.join(" ");
+}
+
+const projects = Object.keys(imageModules).map((p) => ({
+	title: niceTitleFromFilename(p),
+	img: imageModules[p],
+}));
+
+// Hero image (use doors1.jpeg from portfolio)
+const heroImg = new URL("./assets/portfolio/doors1.jpeg", import.meta.url).href;
+
+const showModal = ref(false);
+const modalIndex = ref(0);
+
+function openModal(i: number) {
+	modalIndex.value = i;
+	showModal.value = true;
+}
+
+function closeModal() {
+	showModal.value = false;
+}
+
+function onKey(e: KeyboardEvent) {
+	if (e.key === "Escape") closeModal();
+}
+
+onMounted(() => window.addEventListener("keydown", onKey));
+onUnmounted(() => window.removeEventListener("keydown", onKey));
 
 function submitContact(e: Event) {
 	e.preventDefault();
@@ -82,11 +107,34 @@ function submitContact(e: Event) {
 					</div>
 				</div>
 				<div class="hero-visual" aria-hidden>
-					<!-- Simple decorative glass illustration (CSS) -->
-					<div class="glass-illustration"></div>
+					<img
+						:src="heroImg"
+						alt="Project example - doors"
+						class="hero-image"
+					/>
 				</div>
 			</div>
 		</section>
+
+		<!-- Modal lightbox for projects -->
+		<div v-if="showModal" class="modal-backdrop" @click.self="closeModal">
+			<div class="modal-content" role="dialog" aria-modal="true">
+				<button
+					class="modal-close"
+					@click="closeModal"
+					aria-label="Close"
+				>
+					×
+				</button>
+				<img
+					:src="projects[modalIndex]?.img"
+					:alt="projects[modalIndex]?.title"
+				/>
+				<div class="modal-caption">
+					{{ projects[modalIndex]?.title }}
+				</div>
+			</div>
+		</div>
 
 		<section id="services" class="container services">
 			<h3>Our services</h3>
@@ -136,8 +184,19 @@ function submitContact(e: Event) {
 		<section id="projects" class="container projects">
 			<h3>Recent projects</h3>
 			<div class="project-grid">
-				<div class="project-card" v-for="(p, i) in projects" :key="i">
+				<div
+					class="project-card"
+					v-for="(p, i) in projects"
+					:key="i"
+					role="button"
+					tabindex="0"
+					@click="openModal(i)"
+					@keydown.enter="openModal(i)"
+				>
 					<img :src="p.img" :alt="p.title" />
+					<div class="overlay" aria-hidden>
+						<div class="overlay-title">{{ p.title }}</div>
+					</div>
 					<div class="project-caption">{{ p.title }}</div>
 				</div>
 			</div>
@@ -265,43 +324,26 @@ function submitContact(e: Event) {
 	font-size: 2.2rem;
 	margin-bottom: 0.5rem;
 }
-.hero-copy p {
-	color: rgba(255, 255, 255, 0.8);
-	margin-bottom: 1rem;
-}
-.hero-actions .btn {
-	margin-right: 0.5rem;
-}
-.btn {
-	display: inline-block;
-	text-decoration: none;
-	border-radius: 8px;
-	padding: 0.6rem 1rem;
-	border: 1px solid transparent;
-	background: transparent;
-	color: inherit;
-	cursor: pointer;
-}
+
 .btn.primary {
 	background: var(--brand);
 	color: white;
 }
 
 .hero-visual {
-	width: 320px;
-	height: 200px;
+	/* Constrain hero image area so it can't grow and overlap content */
+	flex: 0 0 min(360px, 40%);
+	max-width: 420px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.glass-illustration {
-	width: 220px;
-	height: 160px;
-	background: linear-gradient(
-		135deg,
-		rgba(11, 116, 222, 0.15),
-		rgba(0, 188, 212, 0.08)
-	);
+
+.hero-image {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16/10;
+	object-fit: cover;
 	border-radius: 8px;
 	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 	border: 1px solid rgba(255, 255, 255, 0.04);
@@ -341,6 +383,75 @@ function submitContact(e: Event) {
 	border-radius: 8px;
 	overflow: hidden;
 	min-height: 120px;
+}
+
+/* Overlay title shown on hover (desktop) */
+.project-card {
+	position: relative;
+	cursor: pointer;
+}
+.overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	pointer-events: none;
+}
+.overlay-title {
+	background: rgba(0, 0, 0, 0.45);
+	color: #fff;
+	padding: 0.5rem 0.75rem;
+	border-radius: 6px;
+	opacity: 0;
+	transform: translateY(6px);
+	transition: opacity 0.18s, transform 0.18s;
+}
+@media (hover: hover) {
+	.project-card:hover .overlay-title {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Modal lightbox */
+.modal-backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+.modal-content {
+	max-width: 920px;
+	width: calc(100% - 40px);
+	background: #111;
+	border-radius: 8px;
+	padding: 1rem;
+	position: relative;
+}
+.modal-content img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 6px;
+}
+.modal-caption {
+	margin-top: 0.5rem;
+	color: #fff;
+	font-weight: 600;
+}
+.modal-close {
+	position: absolute;
+	right: 8px;
+	top: 6px;
+	background: transparent;
+	border: none;
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
 }
 
 .project-card img {
