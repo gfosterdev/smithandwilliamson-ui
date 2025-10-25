@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="40" viewBox="0 0 160 40" role="img" aria-label="FENSA accredited">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b74de" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#007fae" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+  <rect rx="6" ry="6" width="160" height="40" fill="url(#g)" />
+  <text x="20" y="25" font-family="Inter, Arial, Helvetica, sans-serif" font-size="16" fill="#fff" font-weight="700">FENSA</text>
+  <text x="72" y="25" font-family="Inter, Arial, Helvetica, sans-serif" font-size="10" fill="#fff">Accredited Installer</text>
+</svg>
