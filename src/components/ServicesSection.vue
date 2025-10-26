@@ -101,9 +101,11 @@
 				</article>
 			</div>
 
+			<div class="section-divider"></div>
+
 			<div class="accreditation-grid">
 				<!-- FENSA item -->
-				<div class="acc-item">
+				<div class="acc-item fade-in-up" :style="{ '--delay': '80ms' }">
 					<div class="acc-logo">
 						<a
 							class="fensa-link"
@@ -129,7 +131,10 @@
 				</div>
 
 				<!-- GGFI item -->
-				<div class="acc-item">
+				<div
+					class="acc-item fade-in-up"
+					:style="{ '--delay': '160ms' }"
+				>
 					<div class="acc-logo">
 						<img
 							src="../assets/ggfi-warranted.svg"
@@ -370,6 +375,33 @@
 	font-size: 1rem;
 }
 
+/* Section divider */
+.section-divider {
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent 0%,
+		var(--border-weak) 20%,
+		var(--border-weak) 80%,
+		transparent 100%
+	);
+	margin: var(--space-lg) 0;
+	position: relative;
+}
+
+.section-divider::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 8px;
+	height: 8px;
+	background: var(--accent);
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px var(--white), 0 0 0 5px var(--border-weak);
+}
+
 /* Accreditation section */
 .accreditation-section {
 	background: var(--white);
@@ -400,9 +432,9 @@
 	border-radius: var(--radius-lg);
 	border: 1px solid var(--border-weak);
 	box-shadow: var(--shadow-md);
-	transition: transform var(--transition-base),
-		box-shadow var(--transition-base);
+	transition: all var(--transition-base);
 	position: relative;
+	overflow: hidden;
 }
 
 .acc-item::before {
@@ -413,15 +445,18 @@
 	right: 0;
 	height: 4px;
 	background: linear-gradient(90deg, var(--accent), var(--accent-warm));
-	border-top-left-radius: calc(var(--radius-lg) - 1px);
-	border-top-right-radius: calc(var(--radius-lg) - 1px);
 	opacity: 0;
 	transition: opacity var(--transition-base);
 }
 
 .acc-item:hover {
-	transform: translateY(-6px);
+	transform: translateY(-8px);
 	box-shadow: var(--shadow-xl);
+	border-color: var(--accent);
+}
+
+.acc-item:hover::before {
+	opacity: 1;
 }
 
 .acc-logo {
@@ -430,7 +465,6 @@
 	align-items: center;
 	justify-content: flex-start;
 	width: 100%;
-	min-height: 80px;
 	margin-bottom: var(--space-xs);
 }
 
@@ -451,12 +485,15 @@
 .acc-title {
 	font-weight: 700;
 	color: var(--brand);
-	margin-bottom: 0.25rem;
+	margin: 0 0 var(--space-xs);
+	font-size: 1.375rem;
 }
 
 .acc-text {
 	color: var(--text-secondary);
-	font-size: 0.95rem;
+	line-height: 1.6;
+	margin: 0;
+	font-size: 1rem;
 }
 
 /* Residence Collection section */
