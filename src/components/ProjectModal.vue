@@ -7,11 +7,23 @@
 
 			<div class="modal-header">
 				<h2 class="modal-title">{{ project?.title }}</h2>
-				<span v-if="project?.category" class="modal-category">{{
+				<div
+					v-if="project?.categories && project.categories.length > 0"
+					class="modal-categories"
+				>
+					<span
+						v-for="category in project.categories"
+						:key="category"
+						class="modal-category"
+					>
+						{{ formatCategory(category) }}
+					</span>
+				</div>
+				<!-- Fallback for legacy single category -->
+				<span v-else-if="project?.category" class="modal-category">{{
 					formatCategory(project.category)
 				}}</span>
 			</div>
-
 			<div class="modal-body">
 				<!-- Image Carousel -->
 				<div class="carousel-container">
@@ -91,7 +103,8 @@ interface Project {
 	img?: string;
 	title?: string;
 	description?: string;
-	category?: string;
+	category?: string; // Legacy support
+	categories?: string[]; // New multi-category support
 	images?: string[];
 	specs?: Record<string, string>;
 }
@@ -221,6 +234,12 @@ function formatSpecKey(key: string): string {
 	color: var(--text);
 	margin: 0 0 0.5rem 0;
 	line-height: 1.2;
+}
+
+.modal-categories {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 }
 
 .modal-category {

@@ -7,34 +7,34 @@
 			"../assets/portfolio/doors1.jpeg",
 			"../assets/portfolio/fascia1.png"
 		],
-		"category": "doors"
+		"categories": ["doors", "residential"]
 	},
 	{
 		"id": "fascia1",
 		"title": "Fascia",
 		"description": "Professional fascia work",
 		"image": "../assets/portfolio/fascia1.png",
-		"category": "exterior"
+		"categories": ["exterior", "residential"]
 	},
 	{
 		"id": "house1",
 		"title": "House",
 		"description": "Complete house glazing project",
 		"image": "../assets/portfolio/house1.jpg",
-		"category": "residential"
+		"categories": ["residential", "windows"]
 	},
 	{
 		"id": "ref1",
 		"title": "Roofing",
 		"description": "Reference project showcase",
 		"image": "../assets/portfolio/ref1.jpg",
-		"category": "commercial"
+		"categories": ["commercial", "exterior"]
 	},
 	{
 		"id": "windows1",
 		"title": "Windows",
 		"description": "Energy-efficient window installations",
 		"image": "../assets/portfolio/windows1.jpeg",
-		"category": "windows"
+		"categories": ["windows", "residential"]
 	}
 ]

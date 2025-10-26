@@ -101,24 +101,50 @@
 				</article>
 			</div>
 
-			<div class="accreditation-section">
-				<p class="accreditation">
-					<strong>FENSA Accredited Installer</strong> — We operate in
-					line with recognised industry standards for compliance and
-					energy-efficient installations.
-					<a
-						class="fensa-link"
-						href="https://www.fensa.org.uk"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
+			<div class="accreditation-grid">
+				<!-- FENSA item -->
+				<div class="acc-item">
+					<div class="acc-logo">
+						<a
+							class="fensa-link"
+							href="https://www.fensa.org.uk"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<img
+								src="../assets/fensa-badge-better.svg"
+								alt="FENSA accredited"
+								class="acc-logo-img"
+							/>
+						</a>
+					</div>
+					<div class="acc-content">
+						<div class="acc-title">FENSA Accredited Installer</div>
+						<div class="acc-text">
+							We operate in line with recognised industry
+							standards for compliance and energy-efficient
+							installations.
+						</div>
+					</div>
+				</div>
+
+				<!-- GGFI item -->
+				<div class="acc-item">
+					<div class="acc-logo">
 						<img
-							src="../assets/fensa-badge.svg"
-							alt="FENSA accredited"
-							class="fensa-badge"
+							src="../assets/ggfi-warranted.svg"
+							alt="GGFI Warranted"
+							class="acc-logo-img"
 						/>
-					</a>
-				</p>
+					</div>
+					<div class="acc-content">
+						<div class="acc-title">GGFI Warranted</div>
+						<div class="acc-text">
+							Products warrantied through the Glass &amp; Glazing
+							Federation Insurance (GGFI).
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!-- Residence Collection installer details -->
@@ -354,34 +380,83 @@
 	margin-bottom: var(--space-lg);
 }
 
-.accreditation {
+.accreditation-grid {
+	display: flex;
+	gap: var(--space-lg);
+	justify-content: center;
+	align-items: center;
+	flex-wrap: nowrap; /* keep items in a single row */
+	overflow-x: auto;
+	padding-bottom: var(--space-sm);
+}
+
+.acc-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: var(--space-sm);
+	background: var(--white);
+	padding: var(--space-md);
+	border-radius: var(--radius-lg);
+	border: 1px solid var(--border-weak);
+	box-shadow: var(--shadow-md);
+	transition: transform var(--transition-base),
+		box-shadow var(--transition-base);
+	position: relative;
+}
+
+.acc-item::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(90deg, var(--accent), var(--accent-warm));
+	border-top-left-radius: calc(var(--radius-lg) - 1px);
+	border-top-right-radius: calc(var(--radius-lg) - 1px);
+	opacity: 0;
+	transition: opacity var(--transition-base);
+}
+
+.acc-item:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--shadow-xl);
+}
+
+.acc-logo {
+	flex: 0 0 auto;
 	display: flex;
 	align-items: center;
-	justify-content: center;
-	gap: var(--space-sm);
-	flex-wrap: wrap;
-	margin: 0;
-	color: var(--text-secondary);
-	text-align: center;
+	justify-content: flex-start;
+	width: 100%;
+	min-height: 80px;
+	margin-bottom: var(--space-xs);
 }
 
-.accreditation strong {
-	color: var(--brand);
-}
-
-.fensa-link {
-	display: inline-flex;
-	align-items: center;
-}
-
-.fensa-badge {
-	height: 48px;
+.acc-logo-img {
+	/* max-height: 80px;
+	max-width: 120px; */
 	width: auto;
-	transition: transform var(--transition-base);
+	height: auto;
+	display: block;
+	object-fit: contain;
 }
 
-.fensa-link:hover .fensa-badge {
-	transform: scale(1.05);
+.acc-content {
+	text-align: left;
+	max-width: 100%;
+}
+
+.acc-title {
+	font-weight: 700;
+	color: var(--brand);
+	margin-bottom: 0.25rem;
+}
+
+.acc-text {
+	color: var(--text-secondary);
+	font-size: 0.95rem;
 }
 
 /* Residence Collection section */
@@ -538,6 +613,11 @@
 	.accreditation {
 		flex-direction: column;
 		text-align: center;
+	}
+
+	/* allow accreditation items to wrap on small screens */
+	.accreditation-grid {
+		flex-wrap: wrap;
 	}
 
 	.residence {

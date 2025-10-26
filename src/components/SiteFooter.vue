@@ -156,6 +156,14 @@
 	backdrop-filter: blur(10px);
 }
 
+.badge-icon {
+	height: 20px;
+	width: auto;
+	margin-right: 0.5rem;
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .footer-bottom {
 	display: flex;
 	justify-content: space-between;
