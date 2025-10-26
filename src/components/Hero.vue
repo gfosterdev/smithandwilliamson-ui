@@ -1,36 +1,60 @@
 <template>
 	<section class="hero" :style="{ backgroundImage: `url(${heroImg})` }">
+		<div class="hero-overlay"></div>
 		<div class="container hero-inner">
-			<div class="hero-copy stagger" aria-hidden>
-				<h2 class="fade-in-up" :style="{ '--delay': '80ms' }">
+			<div class="hero-copy">
+				<div class="hero-badge fade-in" :style="{ '--delay': '0ms' }">
+					<svg
+						width="20"
+						height="20"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+					>
+						<path d="M9 11l3 3L22 4"></path>
+						<path
+							d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
+						></path>
+					</svg>
+					<span>Trusted Local Experts</span>
+				</div>
+				<h1 class="fade-in-up" :style="{ '--delay': '80ms' }">
 					Quality windows and glasswork, installed with care
-				</h2>
-				<p class="fade-in" :style="{ '--delay': '160ms' }">
+				</h1>
+				<p
+					class="hero-subtitle fade-in"
+					:style="{ '--delay': '160ms' }"
+				>
 					We deliver high-performance, energy-efficient windows,
 					commercial glazing, and fast repair & replacement services
 					in King's Lynn and across Norfolk. Trusted by homeowners and
 					businesses for reliable, local workmanship.
 				</p>
 				<div
-					class="hero-actions"
-					style="display: flex; gap: 0.5rem"
-					aria-hidden
+					class="hero-actions fade-in"
+					:style="{ '--delay': '240ms' }"
 				>
-					<a
-						href="#contact"
-						class="btn primary fade-in"
-						:style="{ '--delay': '240ms' }"
-						>Request a quote</a
-					>
-					<a
-						href="#projects"
-						class="btn fade-in"
-						:style="{ '--delay': '300ms' }"
-						>See our work</a
-					>
+					<a href="#contact" class="btn primary">Request a quote</a>
+					<a href="#projects" class="btn ghost">See our work</a>
+				</div>
+				<div class="hero-trust fade-in" :style="{ '--delay': '320ms' }">
+					<div class="trust-item">
+						<span class="trust-number">10,000+</span>
+						<span class="trust-label">Happy Customers</span>
+					</div>
+					<div class="trust-divider"></div>
+					<div class="trust-item">
+						<span class="trust-number">25+</span>
+						<span class="trust-label">Years Experience</span>
+					</div>
+					<div class="trust-divider"></div>
+					<div class="trust-item">
+						<span class="trust-number">A+</span>
+						<span class="trust-label">Energy Rating</span>
+					</div>
 				</div>
 			</div>
-			<!-- Decorative background image; provide hidden text for screen readers -->
 			<span class="visually-hidden">Project example - doors</span>
 		</div>
 	</section>
@@ -42,99 +66,179 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 </script>
 
 <style scoped>
-/* Hero styles */
+/* Modern Hero with professional glass/construction aesthetic */
 .hero {
-	padding: 4rem 0;
-	/* use background image to cover the entire hero area */
+	position: relative;
+	min-height: 85vh;
+	display: flex;
+	align-items: center;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
-	/* ensure a reasonable visible area for the background image */
-	min-height: 60vh;
-	position: relative; /* create stacking context for overlay */
-}
-.hero-inner {
-	display: flex;
-	gap: 2rem;
-	align-items: center;
-	position: relative;
-	z-index: 1; /* place content above the overlay */
-}
-.hero-copy {
-	flex: 1;
-	text-align: left;
-}
-.hero-copy,
-.hero-copy p,
-.hero-copy h2 {
-	color: #fff;
-	text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+	overflow: hidden;
 }
 
-/* Dark overlay to improve contrast against background images */
-.hero::before {
+/* Enhanced dark overlay with gradient for better text contrast */
+.hero-overlay {
 	content: "";
 	position: absolute;
 	inset: 0;
 	z-index: 0;
 	pointer-events: none;
-	/* subtle graduated darkening from top to bottom */
 	background: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0.25) 0%,
-		rgba(0, 0, 0, 0.55) 100%
+		135deg,
+		rgba(30, 58, 95, 0.92) 0%,
+		rgba(30, 58, 95, 0.85) 50%,
+		rgba(15, 29, 47, 0.88) 100%
 	);
 }
-.hero-copy h2 {
-	font-size: 2.25rem;
-	margin-bottom: 0.5rem;
-}
-.hero-actions .btn {
-	margin-right: 0.5rem;
-}
-.hero-visual {
-	flex: 0 0 44%;
-	max-width: 520px;
-	display: block;
-}
-.hero-image {
-	width: 100%;
-	height: auto;
-	aspect-ratio: 16/10;
-	object-fit: cover;
-	border-radius: 12px;
-	box-shadow: 0 18px 40px var(--shadow-lg);
-	border: 1px solid var(--border-weak);
+
+.hero-inner {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	padding: var(--space-xl) var(--space-md);
 }
 
-/* Accessibility helper: visually hide content but keep it available to screen readers */
-.visually-hidden {
-	position: absolute !important;
-	width: 1px !important;
-	height: 1px !important;
-	padding: 0 !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	clip: rect(0 0 0 0) !important;
-	white-space: nowrap !important;
-	border: 0 !important;
+.hero-copy {
+	max-width: 700px;
+	color: var(--white);
 }
 
-@media (max-width: 1000px) {
-	.hero-inner {
-		flex-direction: column-reverse;
-		gap: 1rem;
-		align-items: stretch;
+/* Trust badge at top */
+.hero-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 1rem;
+	background: rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 24px;
+	color: var(--white);
+	font-size: 0.9rem;
+	font-weight: 600;
+	margin-bottom: var(--space-sm);
+}
+
+.hero-badge svg {
+	flex-shrink: 0;
+}
+
+.hero-copy h1 {
+	font-size: clamp(2.25rem, 5vw, 3.75rem);
+	color: var(--white);
+	margin-bottom: var(--space-sm);
+	text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+	line-height: 1.15;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+	font-size: 1.15rem;
+	color: rgba(255, 255, 255, 0.95);
+	margin-bottom: var(--space-md);
+	line-height: 1.7;
+	max-width: 600px;
+}
+
+.hero-actions {
+	display: flex;
+	gap: var(--space-sm);
+	flex-wrap: wrap;
+	margin-bottom: var(--space-lg);
+}
+
+.hero-actions .btn.ghost {
+	background: transparent;
+	border-color: rgba(255, 255, 255, 0.8);
+	color: var(--white);
+}
+
+.hero-actions .btn.ghost:hover {
+	background: rgba(255, 255, 255, 0.15);
+	border-color: var(--white);
+	transform: translateY(-2px);
+}
+
+/* Trust indicators */
+.hero-trust {
+	display: flex;
+	gap: var(--space-md);
+	align-items: center;
+	flex-wrap: wrap;
+	padding-top: var(--space-md);
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.trust-item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.25rem;
+}
+
+.trust-number {
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--white);
+	line-height: 1;
+}
+
+.trust-label {
+	font-size: 0.875rem;
+	color: rgba(255, 255, 255, 0.8);
+	font-weight: 500;
+}
+
+.trust-divider {
+	width: 1px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+	.hero {
+		min-height: 70vh;
 	}
-	.hero-visual {
-		display: block;
+
+	.hero-inner {
+		padding: var(--space-lg) var(--space-sm);
+	}
+
+	.hero-copy h1 {
+		font-size: 2rem;
+	}
+
+	.hero-subtitle {
+		font-size: 1rem;
+	}
+
+	.hero-actions {
+		flex-direction: column;
 		width: 100%;
 	}
-	.hero {
-		padding: 2rem 0;
+
+	.hero-actions .btn {
+		width: 100%;
+		justify-content: center;
 	}
-	.hero-copy h2 {
-		font-size: 1.6rem;
+
+	.hero-trust {
+		gap: var(--space-sm);
+	}
+
+	.trust-divider {
+		display: none;
+	}
+
+	.trust-number {
+		font-size: 1.5rem;
+	}
+
+	.trust-label {
+		font-size: 0.8rem;
 	}
 }
 </style>

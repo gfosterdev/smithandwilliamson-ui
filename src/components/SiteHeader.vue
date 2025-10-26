@@ -24,90 +24,136 @@
 </script>
 
 <style scoped>
-/* Header styles moved from App.vue for encapsulation */
+/* Modern header with glass effect and sticky behavior */
 .site-header {
-	background: var(--surface);
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
 	border-bottom: 1px solid var(--border-weak);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	transition: all var(--transition-base);
 }
+
 .header-inner {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	padding: 1rem 0;
+	gap: var(--space-md);
 }
-.brand h1 {
-	margin: 0;
-	font-size: 1.1rem;
-	color: var(--brand);
-}
+
 .brand {
 	display: flex;
 	align-items: center;
-	gap: 0.75rem;
-}
-.brand-logo {
-	height: 44px;
-	width: auto;
-}
-.brand-logo {
-	background: var(--surface-2);
-	padding: 6px 8px;
-	border-radius: 6px;
-	box-shadow: 0 6px 18px var(--shadow-md);
-}
-.tag {
-	margin: 0;
-	font-size: 0.9rem;
-	color: var(--muted-text);
-}
-.nav a {
-	margin-left: 1rem;
-	color: var(--muted-text);
-	text-decoration: none;
-}
-.nav .cta {
-	padding: 0.45rem 0.75rem;
-	background: var(--brand);
-	color: white;
-	border-radius: 6px;
+	gap: 0.875rem;
 }
 
-@media (max-width: 1000px) {
+.brand-logo {
+	height: 48px;
+	width: auto;
+	background: var(--surface-2);
+	padding: 8px 10px;
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-sm);
+	transition: all var(--transition-base);
+}
+
+.brand-logo:hover {
+	box-shadow: var(--shadow-md);
+	transform: translateY(-1px);
+}
+
+.brand h1 {
+	margin: 0;
+	font-size: 1.25rem;
+	color: var(--brand);
+	font-weight: 700;
+}
+
+.tag {
+	margin: 0;
+	font-size: 0.875rem;
+	color: var(--text-secondary);
+	font-weight: 500;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
+}
+
+.nav a {
+	color: var(--text-secondary);
+	text-decoration: none;
+	font-weight: 600;
+	padding: 0.5rem 0.875rem;
+	border-radius: var(--radius-sm);
+	transition: all var(--transition-fast);
+	position: relative;
+}
+
+.nav a:not(.cta):hover {
+	color: var(--brand);
+	background: var(--surface-2);
+}
+
+.nav a.cta {
+	padding: 0.625rem 1.25rem;
+	background: var(--accent-warm);
+	color: white;
+	border-radius: var(--radius-md);
+	box-shadow: 0 2px 8px rgba(255, 107, 53, 0.25);
+}
+
+.nav a.cta:hover {
+	background: var(--accent-warm-hover);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(255, 107, 53, 0.35);
+}
+
+@media (max-width: 768px) {
 	.header-inner {
 		flex-direction: column;
-		gap: 0.5rem;
+		gap: var(--space-sm);
 		align-items: stretch;
-		padding: 0.75rem 1rem;
+		padding: 0.875rem 0;
 	}
+
 	.brand {
 		width: 100%;
-		display: flex;
-		align-items: center;
 		justify-content: space-between;
 	}
+
 	.brand-logo {
-		height: 36px;
+		height: 40px;
 	}
+
 	.brand h1 {
-		margin: 0;
-		font-size: 1rem;
+		font-size: 1.125rem;
 	}
+
+	.tag {
+		font-size: 0.8rem;
+	}
+
 	.nav {
 		width: 100%;
-		display: flex;
-		gap: 0.5rem;
 		justify-content: space-between;
+		gap: 0.5rem;
 	}
+
 	.nav a {
 		flex: 1;
 		text-align: center;
-		padding: 0.75rem 0.6rem;
-		border-radius: 8px;
-		background: var(--surface-muted);
-		border: 1px solid var(--border-weak);
+		font-size: 0.875rem;
+		padding: 0.625rem 0.5rem;
 	}
-	.nav .cta {
-		background: var(--brand-dark);
-		color: var(--white);
+
+	.nav a.cta {
+		padding: 0.625rem 0.5rem;
 	}
 }
 </style>
