@@ -21,7 +21,7 @@
 /* Footer spacing and stacking for small screens */
 .site-footer {
 	margin-top: 3rem;
-	border-top: 1px solid rgba(255, 255, 255, 0.03);
+	border-top: 1px solid var(--border-weak);
 	padding: 1.5rem 0;
 }
 .footer-inner {
@@ -31,6 +31,7 @@
 }
 .footer-links a {
 	margin-left: 1rem;
+	color: var(--muted-text);
 }
 
 @media (max-width: 1000px) {

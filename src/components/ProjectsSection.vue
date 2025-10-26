@@ -91,17 +91,14 @@ function closeModal() {
 	margin-top: 1rem;
 }
 .project-card {
-	background: linear-gradient(
-		180deg,
-		rgba(255, 255, 255, 0.02),
-		rgba(255, 255, 255, 0.01)
-	);
+	background: var(--surface);
 	padding: 0;
-	border-radius: 8px;
+	border-radius: 10px;
 	overflow: hidden;
 	min-height: 120px;
 	position: relative;
 	cursor: pointer;
+	box-shadow: 0 8px 20px var(--shadow-sm);
 }
 .project-card img {
 	width: 100%;
@@ -111,12 +108,10 @@ function closeModal() {
 }
 .project-caption {
 	padding: 0.75rem 1rem;
-	background: rgba(0, 0, 0, 0.15);
-	color: rgba(255, 255, 255, 0.95);
+	background: transparent;
+	color: var(--text);
 	font-weight: 600;
 }
-
-/* Overlay title shown on hover (desktop) */
 .overlay {
 	position: absolute;
 	inset: 0;
@@ -126,8 +121,8 @@ function closeModal() {
 	pointer-events: none;
 }
 .overlay-title {
-	background: rgba(0, 0, 0, 0.45);
-	color: #fff;
+	background: var(--overlay-dark);
+	color: var(--white);
 	padding: 0.5rem 0.75rem;
 	border-radius: 6px;
 	opacity: 0;
@@ -145,7 +140,7 @@ function closeModal() {
 .modal-backdrop {
 	position: fixed;
 	inset: 0;
-	background: rgba(0, 0, 0, 0.6);
+	background: var(--overlay-backdrop);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -154,10 +149,11 @@ function closeModal() {
 .modal-content {
 	max-width: 920px;
 	width: calc(100% - 40px);
-	background: #111;
+	background: var(--surface);
 	border-radius: 8px;
 	padding: 1rem;
 	position: relative;
+	box-shadow: 0 18px 40px var(--shadow-lg);
 }
 .modal-content img {
 	width: 100%;
@@ -167,7 +163,7 @@ function closeModal() {
 }
 .modal-caption {
 	margin-top: 0.5rem;
-	color: #fff;
+	color: var(--text);
 	font-weight: 600;
 }
 .modal-close {
@@ -176,7 +172,7 @@ function closeModal() {
 	top: 6px;
 	background: transparent;
 	border: none;
-	color: #fff;
+	color: var(--text);
 	font-size: 22px;
 	cursor: pointer;
 }

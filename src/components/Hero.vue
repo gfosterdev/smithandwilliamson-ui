@@ -45,37 +45,36 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 	text-align: left;
 }
 .hero-copy h2 {
-	font-size: 2.2rem;
+	font-size: 2.25rem;
 	margin-bottom: 0.5rem;
 }
 .hero-actions .btn {
 	margin-right: 0.5rem;
 }
 .hero-visual {
-	flex: 0 0 min(360px, 40%);
-	max-width: 420px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	flex: 0 0 44%;
+	max-width: 520px;
+	display: block;
 }
 .hero-image {
 	width: 100%;
 	height: auto;
 	aspect-ratio: 16/10;
 	object-fit: cover;
-	border-radius: 8px;
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-	border: 1px solid rgba(255, 255, 255, 0.04);
+	border-radius: 12px;
+	box-shadow: 0 18px 40px var(--shadow-lg);
+	border: 1px solid var(--border-weak);
 }
 
 @media (max-width: 1000px) {
 	.hero-inner {
-		flex-direction: column;
+		flex-direction: column-reverse;
 		gap: 1rem;
 		align-items: stretch;
 	}
 	.hero-visual {
-		display: none;
+		display: block;
+		width: 100%;
 	}
 	.hero {
 		padding: 2rem 0;

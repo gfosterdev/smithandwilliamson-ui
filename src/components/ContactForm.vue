@@ -77,14 +77,14 @@ function submitContact() {
 	flex: 1;
 	padding: 0.6rem;
 	border-radius: 6px;
-	border: 1px solid rgba(255, 255, 255, 0.06);
+	border: 1px solid var(--border-weak);
 	background: transparent;
 	color: inherit;
 }
 .contact-form textarea {
 	padding: 0.6rem;
 	border-radius: 6px;
-	border: 1px solid rgba(255, 255, 255, 0.06);
+	border: 1px solid var(--border-weak);
 	background: transparent;
 	color: inherit;
 }

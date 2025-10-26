@@ -1,108 +1,406 @@
+/* Global stylesheet adapted to match a clean, bright site like
+	 the reference (westnorfolkglass.co.uk). This file provides
+	 typographic scale, brand colours, layout primitives and a small
+	 set of utility classes. Component-scoped styles still apply but
+	 will inherit these primitives. */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+/* Global stylesheet adapted to match a clean, bright site like
+   the reference (westnorfolkglass.co.uk). This file provides
+   typographic scale, brand colours, layout primitives and a small
+   set of utility classes. Component-scoped styles still apply but
+   will inherit these primitives. */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
 :root {
-	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	/* typography */
+	--font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial;
+	--base-size: 16px;
+	--rhythm: 1.5rem;
+
+	/* brand colours: primary orange, secondary blue, and silver neutral */
+	--brand: #ff7a00; /* primary orange (used for accents) */
+	--brand-dark: #9a3f00; /* darker orange for CTAs to meet contrast */
+	--accent: #0b74de; /* secondary blue accent (links) */
+	--silver: #cfcfcf; /* neutral silver */
+	--muted: #6c7a86;
+	--surface: #ffffff;
+	--surface-2: #f6f7f8; /* very light silver tint */
+	--shadow: rgba(16, 24, 40, 0.08);
+	/* shadow scale and surface tints */
+	--shadow-sm: rgba(2, 6, 23, 0.04);
+	--shadow-md: rgba(2, 6, 23, 0.06);
+	--shadow-lg: rgba(2, 6, 23, 0.12);
+	--border-weak: rgba(15, 23, 32, 0.04);
+	--surface-muted: rgba(15, 23, 32, 0.03);
+	--overlay-dark: rgba(0, 0, 0, 0.5);
+	--overlay-backdrop: rgba(0, 0, 0, 0.6);
+	--white: #ffffff;
+
+	/* accessibility */
+	color-scheme: light;
+	--text: #0f1720;
+	--muted-text: #5b6b73;
+}
+
+/* Base page */
+html,
+body,
+#app {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: var(--font-sans);
+	font-size: var(--base-size);
 	line-height: 1.5;
-	font-weight: 400;
-
-	/* Brand colors for Smith & Williamson */
-	--brand: #0b74de; /* primary blue */
-	--brand-dark: #095bb0;
-	--accent: #00bcd4; /* glass accent */
-	--muted: #f4f6f8;
-
-	color-scheme: light dark;
-	color: rgba(255, 255, 255, 0.87);
-	background-color: #242424;
-
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
+	color: var(--text);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-a {
-	font-weight: 500;
-	color: #646cff;
-	text-decoration: inherit;
-}
-a:hover {
-	color: #535bf2;
-}
-
-body {
-	margin: 0;
-	display: flex;
-	place-items: center;
-	min-width: 320px;
-	min-height: 100vh;
-}
-
-h1 {
-	font-size: 3.2em;
-	line-height: 1.1;
-}
-
-button {
-	border-radius: 8px;
-	border: 1px solid transparent;
-	padding: 0.6em 1.2em;
-	font-size: 1em;
-	font-weight: 500;
-	font-family: inherit;
-	background-color: #1a1a1a;
-	cursor: pointer;
-	transition: border-color 0.25s;
-}
-button:hover {
-	border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
-}
-
-.card {
-	padding: 2em;
-}
-
+/* Page container used by App.vue */
 #app {
-	max-width: 1280px;
+	max-width: 1200px;
 	margin: 0 auto;
-	padding: 2rem;
-	text-align: center;
+	padding: 1.5rem;
 }
 
-/* Shared layout container used by components */
+/* Re-usable container for sections */
 .container {
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 2rem;
+	padding: 2rem 1rem;
 }
 
-/* Shared button styles (used across components) */
-.btn {
-	display: inline-block;
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	font-weight: 600;
+	color: var(--text);
+}
+h1 {
+	font-size: 2.2rem;
+	line-height: 1.08;
+}
+h2 {
+	font-size: 1.6rem;
+}
+h3 {
+	font-size: 1.15rem;
+	text-transform: none;
+	letter-spacing: 0.2px;
+}
+
+p {
+	color: var(--muted-text);
+	margin: 0 0 1rem 0;
+}
+
+/* Links: use blue accent for accessible contrast */
+a {
+	color: var(--accent);
 	text-decoration: none;
-	border-radius: 8px;
+	font-weight: 600;
+}
+a:hover {
+	color: var(--brand-dark);
+}
+
+/* Buttons */
+.btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
 	padding: 0.6rem 1rem;
+	border-radius: 8px;
 	border: 1px solid transparent;
 	background: transparent;
 	color: inherit;
 	cursor: pointer;
+	font-weight: 600;
 }
 .btn.primary {
-	background: var(--brand);
+	background: var(--brand-dark);
 	color: white;
+	box-shadow: 0 6px 18px rgba(154, 63, 0, 0.18);
+}
+.btn.ghost {
+	background: transparent;
+	border: 1px solid rgba(15, 23, 32, 0.06);
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
+/* Cards and surfaces */
+.card {
+	background: var(--surface-2);
+	border-radius: 10px;
+	padding: 1rem;
+	box-shadow: 0 6px 18px var(--shadow);
+}
+
+/* Header utility */
+.site-header {
+	background: var(--surface);
+	border-bottom: 1px solid rgba(15, 23, 32, 0.06);
+	position: sticky;
+	top: 0;
+	z-index: 50;
+}
+.header-inner {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1rem 0;
+}
+.brand {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+}
+.brand h1 {
+	margin: 0;
+	font-size: 1.05rem;
+	color: var(--text);
+}
+.tag {
+	margin: 0;
+	color: var(--muted-text);
+	font-size: 0.9rem;
+}
+.brand-logo {
+	height: 44px;
+	width: auto;
+}
+.nav {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+.nav a {
+	color: var(--muted-text);
+	padding: 0.4rem 0.6rem;
+}
+.nav a.cta {
+	background: var(--brand-dark);
+	color: #fff;
+	border-radius: 8px;
+	padding: 0.5rem 0.75rem;
+}
+
+@media (max-width: 900px) {
+	.header-inner {
+		flex-direction: column;
+		align-items: stretch;
+		padding: 0.75rem 0;
 	}
-	a:hover {
-		color: #747bff;
+	.nav {
+		width: 100%;
+		justify-content: space-between;
 	}
-	button {
-		background-color: #f9f9f9;
+}
+
+/* Hero styles: a bright, roomy hero with visual on the right */
+.hero {
+	padding: 4rem 0;
+}
+.hero-inner {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+}
+.hero-copy {
+	flex: 1;
+}
+.hero-copy h2 {
+	font-size: 2.25rem;
+	margin-bottom: 0.5rem;
+}
+.hero-copy p {
+	max-width: 60ch;
+	color: var(--muted-text);
+}
+.hero-visual {
+	flex: 0 0 44%;
+	max-width: 520px;
+}
+.hero-image {
+	width: 100%;
+	height: auto;
+	border-radius: 12px;
+	box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+}
+
+@media (max-width: 1000px) {
+	.hero-inner {
+		flex-direction: column-reverse;
 	}
+	.hero-visual {
+		width: 100%;
+	}
+	.hero {
+		padding: 2rem 0;
+	}
+}
+
+/* Services grid: elevated white cards with subtle borders */
+.services {
+	padding-top: 2rem;
+}
+.service-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1rem;
+	margin-top: 1rem;
+}
+.service {
+	background: var(--surface);
+	border-radius: 10px;
+	padding: 1.25rem;
+	border: 1px solid rgba(15, 23, 32, 0.04);
+}
+.service h4 {
+	margin-bottom: 0.5rem;
+}
+.accreditation {
+	margin-top: 0.75rem;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+.fensa-badge {
+	height: 36px;
+}
+.residence {
+	margin-top: 1.25rem;
+	padding-top: 1rem;
+	border-top: 1px dashed rgba(15, 23, 32, 0.04);
+}
+.partners {
+	display: flex;
+	gap: 0.75rem;
+	align-items: center;
+	margin-top: 0.5rem;
+}
+.partners img {
+	height: 36px;
+}
+
+/* Projects: softer overlays */
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 1rem;
+}
+.project-card {
+	border-radius: 10px;
+	overflow: hidden;
+	background: white;
+	box-shadow: 0 8px 20px rgba(2, 6, 23, 0.06);
+}
+.project-card img {
+	display: block;
+	width: 100%;
+	height: 160px;
+	object-fit: cover;
+}
+.project-caption {
+	padding: 0.75rem 1rem;
+	font-weight: 600;
+	color: var(--text);
+}
+.overlay-title {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 0.4rem 0.6rem;
+	border-radius: 6px;
+}
+
+/* Modal lightbox */
+.modal-backdrop {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+}
+.modal-content {
+	max-width: 920px;
+	width: calc(100% - 40px);
+	background: #fff;
+	border-radius: 8px;
+	padding: 1rem;
+	position: relative;
+	box-shadow: 0 18px 40px rgba(2, 6, 23, 0.12);
+}
+.modal-content img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 6px;
+}
+.modal-caption {
+	margin-top: 0.5rem;
+	color: var(--text);
+	font-weight: 600;
+}
+.modal-close {
+	position: absolute;
+	right: 8px;
+	top: 6px;
+	background: transparent;
+	border: none;
+	color: var(--text);
+	font-size: 22px;
+	cursor: pointer;
+}
+
+/* Footer */
+.site-footer {
+	margin-top: 3rem;
+	border-top: 1px solid rgba(15, 23, 32, 0.04);
+	padding: 1.5rem 0;
+}
+.footer-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer-links a {
+	margin-left: 1rem;
+	color: var(--muted-text);
+}
+
+@media (max-width: 900px) {
+	.service-grid {
+		grid-template-columns: 1fr;
+	}
+	.project-grid {
+		grid-template-columns: 1fr;
+	}
+	.footer-inner {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5rem;
+	}
+}
+
+/* Utility: small helpers used across components */
+.muted {
+	color: var(--muted-text);
+}
+.visually-hidden {
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	white-space: nowrap;
 }

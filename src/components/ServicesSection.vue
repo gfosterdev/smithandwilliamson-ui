@@ -102,14 +102,19 @@
 }
 .service-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	gap: 1rem;
 	margin-top: 1rem;
 }
 .service {
-	background: rgba(255, 255, 255, 0.02);
+	background: var(--surface);
 	padding: 1.25rem;
-	border-radius: 8px;
+	border-radius: 10px;
+	border: 1px solid var(--border-weak);
+	box-shadow: 0 8px 20px var(--shadow-sm);
+}
+.service h4 {
+	margin-bottom: 0.5rem;
 }
 .accreditation {
 	margin-top: 0.75rem;
@@ -118,17 +123,16 @@
 	gap: 0.5rem;
 }
 .fensa-badge {
-	height: 32px;
+	height: 36px;
 }
-
 .residence {
 	margin-top: 1rem;
-	padding-top: 0.5rem;
-	border-top: 1px dashed rgba(255, 255, 255, 0.03);
+	padding-top: 0.75rem;
+	border-top: 1px dashed var(--border-weak);
 }
 .residence-blurb {
 	margin: 0.5rem 0;
-	color: rgba(255, 255, 255, 0.9);
+	color: var(--muted-text);
 }
 .partners {
 	display: flex;
@@ -151,7 +155,7 @@
 	height: 42px;
 	width: auto;
 	display: inline-block;
-	filter: grayscale(1) contrast(0.9);
+	filter: none;
 	opacity: 0.95;
 }
 
@@ -167,7 +171,6 @@
 	.accreditation .fensa-link {
 		align-self: flex-end;
 	}
-
 	.residence {
 		border-top: none;
 	}

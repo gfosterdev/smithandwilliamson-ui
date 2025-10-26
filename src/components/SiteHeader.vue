@@ -26,8 +26,8 @@
 <style scoped>
 /* Header styles moved from App.vue for encapsulation */
 .site-header {
-	background: linear-gradient(180deg, rgba(11, 116, 222, 0.06), transparent);
-	border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+	background: var(--surface);
+	border-bottom: 1px solid var(--border-weak);
 }
 .header-inner {
 	display: flex;
@@ -36,7 +36,7 @@
 }
 .brand h1 {
 	margin: 0;
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	color: var(--brand);
 }
 .brand {
@@ -45,17 +45,23 @@
 	gap: 0.75rem;
 }
 .brand-logo {
-	height: 40px;
+	height: 44px;
 	width: auto;
+}
+.brand-logo {
+	background: var(--surface-2);
+	padding: 6px 8px;
+	border-radius: 6px;
+	box-shadow: 0 6px 18px var(--shadow-md);
 }
 .tag {
 	margin: 0;
 	font-size: 0.9rem;
-	color: rgba(255, 255, 255, 0.7);
+	color: var(--muted-text);
 }
 .nav a {
 	margin-left: 1rem;
-	color: inherit;
+	color: var(--muted-text);
 	text-decoration: none;
 }
 .nav .cta {
@@ -96,21 +102,12 @@
 		text-align: center;
 		padding: 0.75rem 0.6rem;
 		border-radius: 8px;
-		background: rgba(255, 255, 255, 0.02);
-		border: 1px solid rgba(255, 255, 255, 0.03);
+		background: var(--surface-muted);
+		border: 1px solid var(--border-weak);
 	}
 	.nav .cta {
-		background: var(--brand);
-		color: white;
-	}
-
-	@media (max-width: 420px) {
-		.brand h1 {
-			display: none;
-		}
-		.tag {
-			font-size: 0.85rem;
-		}
+		background: var(--brand-dark);
+		color: var(--white);
 	}
 }
 </style>
