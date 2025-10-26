@@ -42,6 +42,55 @@
 				/>
 			</a>
 		</p>
+
+		<!-- Residence Collection installer details (sourced from Residence profile) -->
+		<section class="residence">
+			<p class="residence-blurb">
+				We are a family-run business with over 10 years' experience. We
+				are fully FENSA registered and warrant our products through the
+				GGFI. We specialise in Residence systems (R9, R7, R2) for
+				windows, doors, conservatories and orangeries. We offer complete
+				installations or supply-only at competitive rates.
+			</p>
+
+			<div class="partners" aria-hidden>
+				<!-- Residence brand marks (linked to Residence Collection assets) -->
+				<img
+					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/09/r9.svg"
+					alt="Residence R9"
+				/>
+				<img
+					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/09/r7.svg"
+					alt="Residence R7"
+				/>
+				<!-- RD / R2 may be available; including the common marks if present -->
+				<img
+					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/09/r2.svg"
+					alt="Residence R2"
+					onerror="this.style.display='none'"
+				/>
+				<img
+					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/09/rd.svg"
+					alt="Residence RD"
+					onerror="this.style.display='none'"
+				/>
+			</div>
+
+			<div class="experience-grid" aria-hidden>
+				<img
+					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/12/100-Installation.svg"
+					alt="100+ installations"
+				/>
+				<img
+					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/12/5-Conservation.svg"
+					alt="Conservation area installations"
+				/>
+				<img
+					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/12/Sample-window.svg"
+					alt="Sample window available"
+				/>
+			</div>
+		</section>
 	</section>
 </template>
 
@@ -75,6 +124,40 @@
 	height: 32px;
 }
 
+.residence {
+	margin-top: 1rem;
+	padding-top: 0.5rem;
+	border-top: 1px dashed rgba(255, 255, 255, 0.03);
+}
+.residence-blurb {
+	margin: 0.5rem 0;
+	color: rgba(255, 255, 255, 0.9);
+}
+.partners {
+	display: flex;
+	gap: 0.75rem;
+	align-items: center;
+	margin-top: 0.5rem;
+}
+.partners img {
+	height: 36px;
+	width: auto;
+	display: inline-block;
+}
+.experience-grid {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	margin-top: 0.75rem;
+}
+.experience-grid img {
+	height: 42px;
+	width: auto;
+	display: inline-block;
+	filter: grayscale(1) contrast(0.9);
+	opacity: 0.95;
+}
+
 @media (max-width: 1000px) {
 	.service-grid {
 		grid-template-columns: 1fr;
@@ -86,6 +169,16 @@
 	}
 	.accreditation .fensa-link {
 		align-self: flex-end;
+	}
+
+	.residence {
+		border-top: none;
+	}
+	.partners {
+		gap: 0.5rem;
+	}
+	.partners img {
+		height: 30px;
 	}
 }
 </style>
