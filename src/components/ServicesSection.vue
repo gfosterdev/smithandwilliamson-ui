@@ -54,41 +54,38 @@
 			</p>
 
 			<div class="partners" aria-hidden>
-				<!-- Residence brand marks (linked to Residence Collection assets) -->
-				<img
-					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/09/r9.svg"
-					alt="Residence R9"
-				/>
-				<img
-					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/09/r7.svg"
-					alt="Residence R7"
-				/>
-				<!-- RD / R2 may be available; including the common marks if present -->
-				<img
-					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/09/r2.svg"
-					alt="Residence R2"
-					onerror="this.style.display='none'"
-				/>
-				<img
-					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/09/rd.svg"
-					alt="Residence RD"
-					onerror="this.style.display='none'"
-				/>
+				<!-- Local copies of Residence brand marks -->
+				<img src="../assets/residence/r9.svg" alt="Residence R9" />
+				<img src="../assets/residence/r7.svg" alt="Residence R7" />
+				<img src="../assets/residence/r2.svg" alt="Residence R2" />
+				<img src="../assets/residence/rd.svg" alt="Residence RD" />
 			</div>
 
 			<div class="experience-grid" aria-hidden>
 				<img
-					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/12/100-Installation.svg"
+					src="../assets/residence/100-Installation.svg"
 					alt="100+ installations"
 				/>
 				<img
-					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/12/5-Conservation.svg"
+					src="../assets/residence/5-Conservation.svg"
 					alt="Conservation area installations"
 				/>
 				<img
-					src="https://www.residencecollection.co.uk/wp-content/uploads/2022/12/Sample-window.svg"
+					src="../assets/residence/Sample-window.svg"
 					alt="Sample window available"
 				/>
+			</div>
+
+			<div class="residence-cta">
+				<a
+					class="btn primary"
+					href="https://www.residencecollection.co.uk/installers/smith-williamson/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					Residence-approved installer — View profile
+				</a>
+				<a class="btn" href="#contact">Request a callback</a>
 			</div>
 		</section>
 	</section>
