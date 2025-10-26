@@ -404,3 +404,60 @@ a:hover {
 	clip: rect(1px, 1px, 1px, 1px);
 	white-space: nowrap;
 }
+
+/* Animations: reusable, accessible, ease-in micro-animations */
+@media (prefers-reduced-motion: no-preference) {
+	@keyframes fade-in-up {
+		from {
+			opacity: 0;
+			transform: translateY(8px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* Utility: apply a gentle fade + lift (good for headings, cards) */
+	.fade-in-up {
+		opacity: 0;
+		transform: translateY(8px);
+		animation: fade-in-up 420ms cubic-bezier(0.22, 0.9, 0.35, 1) forwards;
+		animation-delay: var(--delay, 0ms);
+	}
+
+	/* Utility: simple fade-in for text and smaller elements */
+	.fade-in {
+		opacity: 0;
+		animation: fade-in 360ms cubic-bezier(0.22, 0.9, 0.35, 1) forwards;
+		animation-delay: var(--delay, 0ms);
+	}
+
+	/* Staggerable container: children with .stagger will pick up increasing delays */
+	.stagger > * {
+		opacity: 0;
+		transform: translateY(6px);
+		animation: fade-in-up 420ms cubic-bezier(0.22, 0.9, 0.35, 1) forwards;
+		animation-delay: var(--delay, 0ms);
+	}
+}
+
+/* Respect reduced motion: disable animations and show final state */
+@media (prefers-reduced-motion: reduce) {
+	.fade-in,
+	.fade-in-up,
+	.stagger > * {
+		animation: none !important;
+		opacity: 1 !important;
+		transform: none !important;
+	}
+}

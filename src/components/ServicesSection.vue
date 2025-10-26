@@ -9,7 +9,7 @@
 		</div>
 
 		<div class="service-grid">
-			<article class="service">
+			<article class="service fade-in-up" :style="{ '--delay': '80ms' }">
 				<div class="service-head">
 					<div class="service-icon" aria-hidden></div>
 					<h4>Residential Windows</h4>
@@ -20,7 +20,7 @@
 				</p>
 			</article>
 
-			<article class="service">
+			<article class="service fade-in-up" :style="{ '--delay': '160ms' }">
 				<div class="service-head">
 					<div class="service-icon" aria-hidden></div>
 					<h4>Commercial Glazing</h4>
@@ -31,7 +31,7 @@
 				</p>
 			</article>
 
-			<article class="service">
+			<article class="service fade-in-up" :style="{ '--delay': '240ms' }">
 				<div class="service-head">
 					<div class="service-icon" aria-hidden></div>
 					<h4>Repairs &amp; Replacements</h4>

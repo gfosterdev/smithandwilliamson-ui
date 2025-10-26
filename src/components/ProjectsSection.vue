@@ -3,9 +3,10 @@
 		<h3>Recent projects</h3>
 		<div class="project-grid">
 			<div
-				class="project-card"
+				class="project-card fade-in-up"
 				v-for="(p, i) in projects"
 				:key="i"
+				:style="{ '--delay': `${i * 80}ms` }"
 				role="button"
 				tabindex="0"
 				@click="openModal(i)"
