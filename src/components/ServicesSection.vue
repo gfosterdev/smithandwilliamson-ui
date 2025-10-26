@@ -137,37 +137,86 @@
 
 				<div class="residence-branding" aria-hidden>
 					<div class="partners">
-						<img
-							src="../assets/residence/r9.svg"
-							alt="Residence R9"
-						/>
-						<img
-							src="../assets/residence/r7.svg"
-							alt="Residence R7"
-						/>
-						<img
-							src="../assets/residence/r2.svg"
-							alt="Residence R2"
-						/>
-						<img
-							src="../assets/residence/rd.svg"
-							alt="Residence RD"
-						/>
+						<span
+							class="logo"
+							data-tooltip="Residence R9"
+							tabindex="0"
+						>
+							<img
+								src="../assets/residence/r9.svg"
+								alt="Residence R9"
+								title="Residence R9"
+							/>
+						</span>
+						<span
+							class="logo"
+							data-tooltip="Residence R7"
+							tabindex="0"
+						>
+							<img
+								src="../assets/residence/r7.svg"
+								alt="Residence R7"
+								title="Residence R7"
+							/>
+						</span>
+						<span
+							class="logo"
+							data-tooltip="Residence R2"
+							tabindex="0"
+						>
+							<img
+								src="../assets/residence/r2.svg"
+								alt="Residence R2"
+								title="Residence R2"
+							/>
+						</span>
+						<span
+							class="logo"
+							data-tooltip="Residence RD"
+							tabindex="0"
+						>
+							<img
+								src="../assets/residence/rd.svg"
+								alt="Residence RD"
+								title="Residence RD"
+							/>
+						</span>
 					</div>
 
 					<div class="experience-grid">
-						<img
-							src="../assets/residence/100-Installation.svg"
-							alt="100+ installations"
-						/>
-						<img
-							src="../assets/residence/5-Conservation.svg"
-							alt="Conservation area installations"
-						/>
-						<img
-							src="../assets/residence/Sample-window.svg"
-							alt="Sample window available"
-						/>
+						<span
+							class="logo"
+							data-tooltip="100+ installations"
+							tabindex="0"
+						>
+							<img
+								src="../assets/residence/100-Installation.svg"
+								alt="100+ installations"
+								title="100+ installations"
+							/>
+						</span>
+						<span
+							class="logo"
+							data-tooltip="Conservation area installations"
+							tabindex="0"
+						>
+							<img
+								src="../assets/residence/5-Conservation.svg"
+								alt="Conservation area installations"
+								title="Conservation area installations"
+							/>
+						</span>
+						<span
+							class="logo"
+							data-tooltip="Sample window available"
+							tabindex="0"
+						>
+							<img
+								src="../assets/residence/Sample-window.svg"
+								alt="Sample window available"
+								title="Sample window available"
+							/>
+						</span>
 					</div>
 				</div>
 
@@ -408,6 +457,40 @@
 	height: 56px;
 	width: auto;
 	opacity: 0.95;
+}
+
+/* Tooltip wrapper for logos */
+.logo {
+	position: relative;
+	display: inline-block;
+}
+
+.logo::after {
+	content: attr(data-tooltip);
+	position: absolute;
+	bottom: calc(100% + 8px);
+	left: 50%;
+	transform: translateX(-50%) translateY(4px);
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	padding: 6px 8px;
+	border-radius: 6px;
+	font-size: 0.85rem;
+	white-space: nowrap;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.15s ease, transform 0.15s ease;
+	z-index: 1000;
+}
+
+.logo:hover::after,
+.logo:focus::after {
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+}
+
+.logo img {
+	display: block;
 }
 
 .residence-cta {
