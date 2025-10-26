@@ -519,3 +519,18 @@ a:hover {
 		transform: none !important;
 	}
 }
+
+/* Mobile button adjustments */
+@media (max-width: 640px) {
+	.btn {
+		padding: 0.75rem 1.25rem;
+		font-size: 0.95rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.btn {
+		padding: 0.625rem 1rem;
+		font-size: 0.9rem;
+	}
+}

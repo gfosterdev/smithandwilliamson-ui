@@ -1,7 +1,7 @@
 <template>
 	<section class="hero" :style="{ backgroundImage: `url(${heroImg})` }">
 		<div class="hero-overlay"></div>
-		<div class="container hero-inner">
+		<div class="hero-inner">
 			<div class="hero-copy">
 				<div class="hero-badge fade-in" :style="{ '--delay': '0ms' }">
 					<svg
@@ -99,6 +99,8 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 	display: flex;
 	align-items: center;
 	padding: var(--space-xl) var(--space-md);
+	max-width: 1100px;
+	margin: 0 auto;
 }
 
 .hero-copy {
@@ -204,7 +206,12 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 	}
 
 	.hero-inner {
-		padding: var(--space-lg) var(--space-sm);
+		padding: var(--space-md) 1rem;
+	}
+
+	.hero-copy {
+		max-width: 100%;
+		width: 100%;
 	}
 
 	.hero-copy h1 {
@@ -218,11 +225,13 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 	.hero-actions {
 		flex-direction: column;
 		width: 100%;
+		gap: 0.75rem;
 	}
 
 	.hero-actions .btn {
-		width: 100%;
 		justify-content: center;
+		padding: 0.875rem 1rem;
+		font-size: 0.95rem;
 	}
 
 	.hero-trust {
@@ -239,6 +248,17 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 
 	.trust-label {
 		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.hero-inner {
+		padding: var(--space-md) 0.75rem;
+	}
+
+	.hero-actions .btn {
+		padding: 0.75rem 0.875rem;
+		font-size: 0.9rem;
 	}
 }
 </style>

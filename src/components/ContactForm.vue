@@ -53,9 +53,7 @@
 						<div>
 							<h4>Phone</h4>
 							<p>
-								<a href="tel:01553841175">01553 841 175</a
-								><br />
-								<a href="tel:07799620883">07799 620 883</a>
+								<a href="tel:01553841175">01553 841 175</a>
 							</p>
 						</div>
 					</div>
@@ -355,10 +353,12 @@ function submitContact() {
 
 	.form-actions {
 		flex-direction: column;
+		gap: var(--space-xs);
 	}
 
 	.form-actions .btn {
-		width: 100%;
+		padding: 0.75rem 1rem;
+		font-size: 0.9rem;
 	}
 }
 </style>

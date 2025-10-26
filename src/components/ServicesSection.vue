@@ -457,6 +457,13 @@
 		text-align: center;
 	}
 
+	.residence {
+		padding: var(--space-md) var(--space-sm);
+		margin-left: calc(-1 * var(--space-sm));
+		margin-right: calc(-1 * var(--space-sm));
+		border-radius: 0;
+	}
+
 	.partners {
 		gap: var(--space-sm);
 	}
@@ -476,10 +483,12 @@
 	.residence-cta {
 		flex-direction: column;
 		width: 100%;
+		gap: var(--space-xs);
 	}
 
 	.residence-cta .btn {
-		width: 100%;
+		padding: 0.75rem 1rem;
+		font-size: 0.9rem;
 	}
 }
 </style>
