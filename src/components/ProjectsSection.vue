@@ -65,10 +65,20 @@ const imageModules = import.meta.glob("../assets/portfolio/*", {
 
 // Map projects with their resolved image URLs
 const projects = computed(() =>
-	projectsData.map((project) => ({
-		...project,
-		img: imageModules[project.image],
-	}))
+	projectsData.map((project) => {
+		const resolvedImages = project.images
+			?.map((imgPath) => imageModules[imgPath])
+			.filter((url): url is string => !!url);
+		const singleImage = project.image
+			? imageModules[project.image]
+			: undefined;
+
+		return {
+			...project,
+			img: singleImage || resolvedImages?.[0],
+			images: resolvedImages,
+		};
+	})
 );
 
 const showModal = ref(false);

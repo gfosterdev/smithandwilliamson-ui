@@ -3,7 +3,10 @@
 		"id": "doors1",
 		"title": "Doors",
 		"description": "High-quality door installations",
-		"image": "../assets/portfolio/doors1.jpeg",
+		"images": [
+			"../assets/portfolio/doors1.jpeg",
+			"../assets/portfolio/fascia1.png"
+		],
 		"category": "doors"
 	},
 	{
