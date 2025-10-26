@@ -71,6 +71,29 @@ button:focus-visible {
 	text-align: center;
 }
 
+/* Shared layout container used by components */
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+/* Shared button styles (used across components) */
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	border-radius: 8px;
+	padding: 0.6rem 1rem;
+	border: 1px solid transparent;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+}
+.btn.primary {
+	background: var(--brand);
+	color: white;
+}
+
 @media (prefers-color-scheme: light) {
 	:root {
 		color: #213547;
