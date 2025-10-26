@@ -1,0 +1,37 @@
+[
+	{
+		"id": "doors1",
+		"title": "Doors",
+		"description": "High-quality door installations",
+		"image": "../assets/portfolio/doors1.jpeg",
+		"category": "doors"
+	},
+	{
+		"id": "fascia1",
+		"title": "Fascia",
+		"description": "Professional fascia work",
+		"image": "../assets/portfolio/fascia1.png",
+		"category": "exterior"
+	},
+	{
+		"id": "house1",
+		"title": "House",
+		"description": "Complete house glazing project",
+		"image": "../assets/portfolio/house1.jpg",
+		"category": "residential"
+	},
+	{
+		"id": "ref1",
+		"title": "Roofing",
+		"description": "Reference project showcase",
+		"image": "../assets/portfolio/ref1.jpg",
+		"category": "commercial"
+	},
+	{
+		"id": "windows1",
+		"title": "Windows",
+		"description": "Energy-efficient window installations",
+		"image": "../assets/portfolio/windows1.jpeg",
+		"category": "windows"
+	}
+]

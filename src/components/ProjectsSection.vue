@@ -69,32 +69,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, computed } from "vue";
+import projectsData from "../data/projects.json";
 
+// Import all images dynamically based on project data
 // @ts-ignore - Vite import.meta.glob types
 const imageModules = import.meta.glob("../assets/portfolio/*", {
 	eager: true,
 	as: "url",
 }) as Record<string, string>;
 
-function niceTitleFromFilename(path: string) {
-	const parts = path.split("/").pop()?.split(".")?.[0] || path;
-	const cleaned = parts.replace(/\d+/g, "").replace(/[-_]+/g, " ").trim();
-	return cleaned
-		.split(" ")
-		.filter(Boolean)
-		.map((w) => {
-			const s = String(w || "");
-			if (!s) return "";
-			return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
-		})
-		.join(" ");
-}
-
-const projects = Object.keys(imageModules).map((p) => ({
-	title: niceTitleFromFilename(p),
-	img: imageModules[p],
-}));
+// Map projects with their resolved image URLs
+const projects = computed(() =>
+	projectsData.map((project) => ({
+		...project,
+		img: imageModules[project.image],
+	}))
+);
 
 const showModal = ref(false);
 const modalIndex = ref(0);
