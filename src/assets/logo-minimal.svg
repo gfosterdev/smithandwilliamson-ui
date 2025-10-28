@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <style>
+      .frame { fill: none; stroke: #2c5f8d; stroke-width: 2.5; stroke-linejoin: miter; }
+      .accent { fill: none; stroke: #2c5f8d; stroke-width: 1.5; }
+    </style>
+  </defs>
+  
+  <!-- Pitched roof outline -->
+  <polyline points="60,100 100,50 140,100" class="frame"/>
+  
+  <!-- Roof center beam -->
+  <line x1="100" y1="50" x2="100" y2="100" class="accent"/>
+  
+  <!-- Left wall -->
+  <line x1="60" y1="100" x2="60" y2="150" class="frame"/>
+  
+  <!-- Right wall -->
+  <line x1="140" y1="100" x2="140" y2="150" class="frame"/>
+  
+  <!-- Base -->
+  <line x1="60" y1="150" x2="140" y2="150" class="frame"/>
+  
+  <!-- Front panels (vertical dividers) -->
+  <line x1="80" y1="100" x2="80" y2="150" class="accent"/>
+  <line x1="100" y1="100" x2="100" y2="150" class="accent"/>
+  <line x1="120" y1="100" x2="120" y2="150" class="accent"/>
+  
+  <!-- Company text below -->
+  <text x="100" y="175" 
+        font-family="Arial, sans-serif" 
+        font-size="14" 
+        font-weight="300" 
+        letter-spacing="2"
+        fill="#2c5f8d" 
+        text-anchor="middle">S&amp;W</text>
+</svg>

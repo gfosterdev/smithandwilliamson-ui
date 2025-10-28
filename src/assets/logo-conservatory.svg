@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="roofGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a7ca5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2c5f8d;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="glassGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4f8;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#b8dce8;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base/floor of conservatory -->
+  <rect x="40" y="140" width="120" height="8" 
+        fill="#1a3a5c" 
+        stroke="#0f2438" 
+        stroke-width="1"/>
+  
+  <!-- Left wall panel -->
+  <rect x="45" y="80" width="25" height="60" 
+        fill="url(#glassGradient)" 
+        stroke="#2c5f8d" 
+        stroke-width="2"/>
+  <line x1="57.5" y1="80" x2="57.5" y2="140" 
+        stroke="#2c5f8d" 
+        stroke-width="1.5"/>
+  
+  <!-- Right wall panel -->
+  <rect x="130" y="80" width="25" height="60" 
+        fill="url(#glassGradient)" 
+        stroke="#2c5f8d" 
+        stroke-width="2"/>
+  <line x1="142.5" y1="80" x2="142.5" y2="140" 
+        stroke="#2c5f8d" 
+        stroke-width="1.5"/>
+  
+  <!-- Front glass panels -->
+  <rect x="75" y="90" width="22" height="50" 
+        fill="url(#glassGradient)" 
+        stroke="#2c5f8d" 
+        stroke-width="2"/>
+  <line x1="86" y1="90" x2="86" y2="140" 
+        stroke="#2c5f8d" 
+        stroke-width="1"/>
+  
+  <rect x="103" y="90" width="22" height="50" 
+        fill="url(#glassGradient)" 
+        stroke="#2c5f8d" 
+        stroke-width="2"/>
+  <line x1="114" y1="90" x2="114" y2="140" 
+        stroke="#2c5f8d" 
+        stroke-width="1"/>
+  
+  <!-- Pitched roof frame -->
+  <polygon points="100,35 45,80 155,80" 
+           fill="url(#roofGradient)" 
+           stroke="#1a3a5c" 
+           stroke-width="2.5"/>
+  
+  <!-- Roof glazing bars -->
+  <line x1="100" y1="35" x2="100" y2="80" 
+        stroke="#1a3a5c" 
+        stroke-width="3"/>
+  <line x1="100" y1="35" x2="70" y2="80" 
+        stroke="#1a3a5c" 
+        stroke-width="2"/>
+  <line x1="100" y1="35" x2="130" y2="80" 
+        stroke="#1a3a5c" 
+        stroke-width="2"/>
+  
+  <!-- Roof glass reflection effect -->
+  <polygon points="100,35 85,55 115,55" 
+           fill="#ffffff" 
+           opacity="0.3"/>
+  <polygon points="75,65 90,80 110,80 95,65" 
+           fill="#ffffff" 
+           opacity="0.15"/>
+  
+  <!-- Ridge detail -->
+  <line x1="100" y1="33" x2="100" y2="38" 
+        stroke="#0f2438" 
+        stroke-width="4" 
+        stroke-linecap="round"/>
+  
+  <!-- Company initials badge -->
+  <circle cx="100" cy="115" r="18" 
+          fill="#2c5f8d" 
+          opacity="0.95"/>
+  <circle cx="100" cy="115" r="18" 
+          fill="none" 
+          stroke="#ffffff" 
+          stroke-width="1.5" 
+          opacity="0.5"/>
+  <text x="100" y="122" 
+        font-family="Arial, sans-serif" 
+        font-size="16" 
+        font-weight="bold" 
+        fill="#ffffff" 
+        text-anchor="middle">S&amp;W</text>
+  
+  <!-- Glass reflection highlights -->
+  <rect x="77" y="92" width="8" height="12" 
+        fill="#ffffff" 
+        opacity="0.4"/>
+  <rect x="105" y="92" width="8" height="12" 
+        fill="#ffffff" 
+        opacity="0.3"/>
+</svg>

@@ -3,12 +3,10 @@
 		<div class="container header-inner">
 			<div class="brand">
 				<img
-					src="../assets/logo.png"
+					src="../assets/logo-horizontal-3pane.svg"
 					alt="Smith &amp; Williamson logo"
 					class="brand-logo"
 				/>
-				<h1>Smith &amp; Williamson</h1>
-				<p class="tag">Windows &amp; Glass Solutions</p>
 			</div>
 			<nav class="nav">
 				<a href="#services">Services</a>
@@ -51,32 +49,14 @@
 }
 
 .brand-logo {
-	height: 48px;
+	height: 70px;
 	width: auto;
-	background: var(--surface-2);
-	padding: 8px 10px;
-	border-radius: var(--radius-md);
-	box-shadow: var(--shadow-sm);
 	transition: all var(--transition-base);
 }
 
 .brand-logo:hover {
-	box-shadow: var(--shadow-md);
 	transform: translateY(-1px);
-}
-
-.brand h1 {
-	margin: 0;
-	font-size: 1.25rem;
-	color: var(--brand);
-	font-weight: 700;
-}
-
-.tag {
-	margin: 0;
-	font-size: 0.875rem;
-	color: var(--text-secondary);
-	font-weight: 500;
+	opacity: 0.9;
 }
 
 .nav {
@@ -128,15 +108,7 @@
 	}
 
 	.brand-logo {
-		height: 40px;
-	}
-
-	.brand h1 {
-		font-size: 1.125rem;
-	}
-
-	.tag {
-		font-size: 0.8rem;
+		height: 50px;
 	}
 
 	.nav {

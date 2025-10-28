@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="windowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c5f8d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a3a5c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Window frame -->
+  <rect x="30" y="30" width="140" height="140" 
+        fill="url(#windowGradient)" 
+        stroke="#1a3a5c" 
+        stroke-width="3" 
+        rx="4"/>
+  
+  <!-- Window panes - outer frame -->
+  <rect x="40" y="40" width="120" height="120" 
+        fill="#e8f4f8" 
+        stroke="#2c5f8d" 
+        stroke-width="2"/>
+  
+  <!-- Vertical mullion (center divider) -->
+  <rect x="97" y="40" width="6" height="120" 
+        fill="#2c5f8d"/>
+  
+  <!-- Horizontal transom (center divider) -->
+  <rect x="40" y="97" width="120" height="6" 
+        fill="#2c5f8d"/>
+  
+  <!-- Glass pane reflections for depth -->
+  <path d="M 45 45 L 95 45 L 75 75 L 45 75 Z" 
+        fill="#ffffff" 
+        opacity="0.3"/>
+  <path d="M 105 45 L 155 45 L 135 75 L 105 75 Z" 
+        fill="#ffffff" 
+        opacity="0.2"/>
+  
+  <!-- Inner frame details -->
+  <rect x="40" y="40" width="120" height="120" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="1" 
+        opacity="0.3"/>
+  
+  <!-- Company initials in the center -->
+  <circle cx="100" cy="100" r="20" 
+          fill="#2c5f8d" 
+          opacity="0.9"/>
+  <text x="100" y="108" 
+        font-family="Arial, sans-serif" 
+        font-size="20" 
+        font-weight="bold" 
+        fill="#ffffff" 
+        text-anchor="middle">S&amp;W</text>
+</svg>
