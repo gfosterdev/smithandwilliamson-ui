@@ -9,8 +9,12 @@
 				/>
 			</div>
 			<nav class="nav">
-				<a href="#services">Services</a>
-				<a href="#projects">Projects</a>
+				<a href="#services" @click.prevent="scrollToSection('services')"
+					>Services</a
+				>
+				<a href="#projects" @click.prevent="scrollToSection('projects')"
+					>Projects</a
+				>
 				<a
 					href="https://www.instagram.com/smith_and_williamson"
 					target="_blank"
@@ -43,14 +47,31 @@
 						<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
 					</svg>
 				</a>
-				<a href="#contact" class="cta">Get a Quote</a>
+				<a
+					href="#contact"
+					@click.prevent="scrollToSection('contact')"
+					class="cta"
+					>Get a Quote</a
+				>
 			</nav>
 		</div>
 	</header>
 </template>
 
 <script setup lang="ts">
-// purely presentational header
+const scrollToSection = (sectionId: string) => {
+	const element = document.getElementById(sectionId);
+	if (element) {
+		const headerOffset = 80; // Account for sticky header height
+		const elementPosition = element.getBoundingClientRect().top;
+		const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+		window.scrollTo({
+			top: offsetPosition,
+			behavior: "smooth",
+		});
+	}
+};
 </script>
 
 <style scoped>
