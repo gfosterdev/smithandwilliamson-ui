@@ -8,8 +8,8 @@ import SiteFooter from "./components/SiteFooter.vue";
 </script>
 
 <template>
+	<SiteHeader />
 	<div id="landing">
-		<SiteHeader />
 		<Hero />
 		<ServicesSection />
 		<ProjectsSection />

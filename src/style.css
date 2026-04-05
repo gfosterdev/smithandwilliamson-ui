@@ -21,29 +21,31 @@
 	--base-size: 16px;
 	--rhythm: 1.5rem;
 
-	/* Modern brand colours for windows & glass specialist */
-	--brand: #1e3a5f; /* deep professional blue - trust & reliability */
-	--brand-light: #2d5a7b; /* lighter blue for gradients */
-	--brand-dark: #0f1d2f; /* darker blue for depth */
-	--accent: #4a90e2; /* sky blue - glass/clarity theme */
-	--accent-warm: #ff6b35; /* warm orange for CTAs - action & energy */
-	--accent-warm-hover: #e55a2b;
+	/* Eastern Frames inspired color palette */
+	--brand: #003366; /* Deep navy blue - professional and trustworthy */
+	--brand-light: #0055aa; /* Brighter blue for hover states */
+	--brand-dark: #002244; /* Darker navy for depth */
+	--accent: #0088cc; /* Bright blue - modern and clean */
+	--accent-warm: #ff6600; /* Orange for CTAs - action & energy */
+	--accent-warm-hover: #e55a00;
+	--accent-light: #66b3e5; /* Light blue accents */
 	--steel: #5a6c7d; /* steel grey - frame/metal accents */
 	--glass-tint: #e8f4f8; /* light glass blue background */
 	--silver: #d4d4d8; /* neutral silver */
 	--muted: #6c7a86;
 	--surface: #ffffff;
-	--surface-2: #f8f9fa; /* very light neutral */
+	--surface-2: #f5f7fa; /* very light neutral background */
+	--surface-3: #e8ecf0; /* slightly darker for contrast */
 	--surface-elevated: #ffffff;
-	--shadow: rgba(16, 24, 40, 0.08);
+	--shadow: rgba(0, 51, 102, 0.08);
 	/* Enhanced shadow scale for depth */
 	--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
 	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
 	--shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
 	--shadow-xl: 0 12px 40px rgba(0, 0, 0, 0.16);
-	--border-weak: rgba(15, 23, 32, 0.08);
-	--border-medium: rgba(15, 23, 32, 0.12);
-	--surface-muted: rgba(15, 23, 32, 0.03);
+	--border-weak: rgba(0, 0, 0, 0.06);
+	--border-medium: rgba(0, 0, 0, 0.1);
+	--surface-muted: rgba(0, 0, 0, 0.03);
 	--overlay-dark: rgba(0, 0, 0, 0.6);
 	--overlay-backdrop: rgba(0, 0, 0, 0.75);
 	--white: #ffffff;
@@ -79,32 +81,50 @@
 
 /* Base page */
 html,
-body,
-#app {
+body {
 	height: 100%;
 }
+
 body {
 	margin: 0;
 	font-family: var(--font-sans);
 	font-size: var(--base-size);
-	line-height: 1.5;
+	line-height: 1.6;
 	color: var(--text);
+	background-color: var(--white);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Page container used by App.vue */
 #app {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 1.5rem;
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+
+#landing {
+	width: 100%;
+	overflow-x: hidden;
 }
 
 /* Re-usable container for sections */
 .container {
-	max-width: 1100px;
+	max-width: 1200px;
 	margin: 0 auto;
-	padding: 2rem 1rem;
+	padding: 0 2rem;
+}
+
+.section {
+	padding: 4rem 0;
+}
+
+.section-white {
+	background: var(--white);
+}
+
+.section-grey {
+	background: var(--surface-2);
 }
 
 /* Headings */
@@ -159,8 +179,8 @@ a:hover {
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	padding: 0.875rem 1.75rem;
-	border-radius: var(--radius-md);
+	padding: 1rem 2rem;
+	border-radius: var(--radius-sm);
 	border: 2px solid transparent;
 	background: transparent;
 	color: inherit;
@@ -168,6 +188,8 @@ a:hover {
 	font-weight: 600;
 	font-size: 1rem;
 	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 	transition: all var(--transition-base);
 	box-shadow: none;
 }
@@ -175,23 +197,42 @@ a:hover {
 	background: var(--accent-warm);
 	color: white;
 	border-color: var(--accent-warm);
-	box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+	box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
 }
 .btn.primary:hover {
 	background: var(--accent-warm-hover);
 	border-color: var(--accent-warm-hover);
 	transform: translateY(-2px);
-	box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+	box-shadow: 0 6px 20px rgba(255, 102, 0, 0.4);
+}
+.btn.secondary {
+	background: var(--brand);
+	color: white;
+	border-color: var(--brand);
+}
+.btn.secondary:hover {
+	background: var(--brand-light);
+	border-color: var(--brand-light);
+	transform: translateY(-2px);
 }
 .btn.ghost {
 	background: transparent;
-	border: 2px solid var(--border-medium);
-	color: var(--text);
+	border: 2px solid var(--white);
+	color: var(--white);
 }
 .btn.ghost:hover {
-	background: var(--surface-2);
-	border-color: var(--accent);
-	color: var(--accent);
+	background: var(--white);
+	border-color: var(--white);
+	color: var(--brand);
+}
+.btn.outline {
+	background: transparent;
+	border: 2px solid var(--brand);
+	color: var(--brand);
+}
+.btn.outline:hover {
+	background: var(--brand);
+	color: var(--white);
 }
 
 /* Cards and surfaces */

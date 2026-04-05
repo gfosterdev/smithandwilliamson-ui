@@ -1,61 +1,134 @@
 <template>
 	<section class="hero" :style="{ backgroundImage: `url(${heroImg})` }">
 		<div class="hero-overlay"></div>
-		<div class="hero-inner">
-			<div class="hero-copy">
-				<div class="hero-badge fade-in" :style="{ '--delay': '0ms' }">
-					<svg
-						width="20"
-						height="20"
-						viewBox="0 0 24 24"
-						fill="none"
-						stroke="currentColor"
-						stroke-width="2"
+		<div class="container">
+			<div class="hero-inner">
+				<div class="hero-copy">
+					<h1 class="fade-in-up" :style="{ '--delay': '0ms' }">
+						Premium Windows & Glazing Solutions
+					</h1>
+					<p
+						class="hero-subtitle fade-in"
+						:style="{ '--delay': '100ms' }"
 					>
-						<path d="M9 11l3 3L22 4"></path>
-						<path
-							d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
-						></path>
-					</svg>
-					<span>Trusted Local Experts</span>
-				</div>
-				<h1 class="fade-in-up" :style="{ '--delay': '80ms' }">
-					Quality windows and glasswork, installed with care
-				</h1>
-				<p
-					class="hero-subtitle fade-in"
-					:style="{ '--delay': '160ms' }"
-				>
-					We deliver high-performance, energy-efficient windows,
-					commercial glazing, and fast repair & replacement services
-					in King's Lynn and across Norfolk. Trusted by homeowners and
-					businesses for reliable, local workmanship.
-				</p>
-				<div
-					class="hero-actions fade-in"
-					:style="{ '--delay': '240ms' }"
-				>
-					<a href="#contact" class="btn primary">Request a quote</a>
-					<a href="#projects" class="btn ghost">See our work</a>
-				</div>
-				<div class="hero-trust fade-in" :style="{ '--delay': '320ms' }">
-					<div class="trust-item">
-						<span class="trust-number">10,000+</span>
-						<span class="trust-label">Happy Customers</span>
-					</div>
-					<div class="trust-divider"></div>
-					<div class="trust-item">
-						<span class="trust-number">25+</span>
-						<span class="trust-label">Years Experience</span>
-					</div>
-					<div class="trust-divider"></div>
-					<div class="trust-item">
-						<span class="trust-number">A+</span>
-						<span class="trust-label">Energy Rating</span>
+						Expert installation of windows, doors, and commercial
+						glazing across Norfolk. Family-run business with over 25
+						years of trusted service. Quality products, professional
+						fitting, competitive prices.
+					</p>
+					<div
+						class="hero-actions fade-in"
+						:style="{ '--delay': '200ms' }"
+					>
+						<a href="#contact" class="btn primary"
+							>Get Free Quote</a
+						>
+						<a href="#projects" class="btn ghost">View Portfolio</a>
 					</div>
 				</div>
 			</div>
-			<span class="visually-hidden">Project example - doors</span>
+		</div>
+	</section>
+
+	<!-- Welcome section with USPs -->
+	<section id="about" class="welcome-section">
+		<div class="container">
+			<div class="welcome-content">
+				<h2>Welcome to Smith & Williamson</h2>
+				<p class="lead">
+					Your trusted local glazing specialists in King's Lynn and
+					Norfolk. We provide expert installation of energy-efficient
+					windows, secure doors, and bespoke glazing solutions for
+					both residential and commercial projects.
+				</p>
+				<div class="usp-grid">
+					<div class="usp-item">
+						<div class="usp-icon">
+							<svg
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path d="M9 11l3 3L22 4"></path>
+								<path
+									d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"
+								></path>
+							</svg>
+						</div>
+						<h3>Quality Assured</h3>
+						<p>
+							All work guaranteed with FENSA certification and
+							full insurance cover
+						</p>
+					</div>
+					<div class="usp-item">
+						<div class="usp-icon">
+							<svg
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"
+								></path>
+								<circle cx="12" cy="10" r="3"></circle>
+							</svg>
+						</div>
+						<h3>Local Experts</h3>
+						<p>
+							Family-run business serving Norfolk for over 25
+							years
+						</p>
+					</div>
+					<div class="usp-item">
+						<div class="usp-icon">
+							<svg
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<circle cx="12" cy="12" r="10"></circle>
+								<polyline points="12 6 12 12 16 14"></polyline>
+							</svg>
+						</div>
+						<h3>Fast Service</h3>
+						<p>
+							Quick quotes, efficient installation, minimal
+							disruption
+						</p>
+					</div>
+					<div class="usp-item">
+						<div class="usp-icon">
+							<svg
+								width="32"
+								height="32"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+							>
+								<path
+									d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+								></path>
+							</svg>
+						</div>
+						<h3>Competitive Pricing</h3>
+						<p>
+							Best value without compromising on quality or
+							service
+						</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </template>
@@ -66,19 +139,20 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 </script>
 
 <style scoped>
-/* Modern Hero with professional glass/construction aesthetic */
+/* Full-width hero section - Eastern Frames style */
 .hero {
 	position: relative;
-	min-height: 85vh;
+	min-height: 600px;
 	display: flex;
 	align-items: center;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
 	overflow: hidden;
+	width: 100%;
 }
 
-/* Enhanced dark overlay with gradient for better text contrast */
+/* Dark overlay for text contrast */
 .hero-overlay {
 	content: "";
 	position: absolute;
@@ -87,9 +161,8 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 	pointer-events: none;
 	background: linear-gradient(
 		135deg,
-		rgba(30, 58, 95, 0.92) 0%,
-		rgba(30, 58, 95, 0.85) 50%,
-		rgba(15, 29, 47, 0.88) 100%
+		rgba(0, 51, 102, 0.88) 0%,
+		rgba(0, 34, 68, 0.92) 100%
 	);
 }
 
@@ -98,9 +171,8 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 	z-index: 1;
 	display: flex;
 	align-items: center;
-	padding: var(--space-xl) var(--space-md);
-	max-width: 1100px;
-	margin: 0 auto;
+	padding: 6rem 0;
+	width: 100%;
 }
 
 .hero-copy {
@@ -108,110 +180,119 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 	color: var(--white);
 }
 
-/* Trust badge at top */
-.hero-badge {
-	display: inline-flex;
-	align-items: center;
-	gap: 0.5rem;
-	padding: 0.5rem 1rem;
-	background: rgba(255, 255, 255, 0.15);
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 24px;
-	color: var(--white);
-	font-size: 0.9rem;
-	font-weight: 600;
-	margin-bottom: var(--space-sm);
-}
-
-.hero-badge svg {
-	flex-shrink: 0;
-}
-
 .hero-copy h1 {
-	font-size: clamp(2.25rem, 5vw, 3.75rem);
+	font-size: clamp(2.5rem, 5vw, 4rem);
 	color: var(--white);
-	margin-bottom: var(--space-sm);
+	margin-bottom: 1.5rem;
 	text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-	line-height: 1.15;
+	line-height: 1.2;
 	font-weight: 700;
 	letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-	font-size: 1.15rem;
+	font-size: 1.25rem;
 	color: rgba(255, 255, 255, 0.95);
-	margin-bottom: var(--space-md);
+	margin-bottom: 2rem;
 	line-height: 1.7;
-	max-width: 600px;
+	max-width: 650px;
 }
 
 .hero-actions {
 	display: flex;
-	gap: var(--space-sm);
+	gap: 1rem;
 	flex-wrap: wrap;
-	margin-bottom: var(--space-lg);
 }
 
 .hero-actions .btn.ghost {
 	background: transparent;
-	border-color: rgba(255, 255, 255, 0.8);
+	border-color: rgba(255, 255, 255, 0.9);
 	color: var(--white);
 }
 
 .hero-actions .btn.ghost:hover {
-	background: rgba(255, 255, 255, 0.15);
+	background: var(--white);
 	border-color: var(--white);
-	transform: translateY(-2px);
+	color: var(--brand);
 }
 
-/* Trust indicators */
-.hero-trust {
-	display: flex;
-	gap: var(--space-md);
-	align-items: center;
-	flex-wrap: wrap;
-	padding-top: var(--space-md);
-	border-top: 1px solid rgba(255, 255, 255, 0.2);
+/* Welcome section with USPs */
+.welcome-section {
+	background: var(--white);
+	padding: 5rem 0;
 }
 
-.trust-item {
-	display: flex;
-	flex-direction: column;
-	gap: 0.25rem;
+.welcome-content {
+	text-align: center;
+	max-width: 1000px;
+	margin: 0 auto;
 }
 
-.trust-number {
-	font-size: 2rem;
+.welcome-content h2 {
+	font-size: clamp(2rem, 4vw, 3rem);
+	color: var(--brand);
+	margin-bottom: 1.5rem;
 	font-weight: 700;
+}
+
+.lead {
+	font-size: 1.125rem;
+	line-height: 1.8;
+	color: var(--text-secondary);
+	margin-bottom: 3rem;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.usp-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 2.5rem;
+	margin-top: 3rem;
+}
+
+.usp-item {
+	text-align: center;
+	padding: 1.5rem;
+}
+
+.usp-icon {
+	width: 64px;
+	height: 64px;
+	margin: 0 auto 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(
+		135deg,
+		var(--brand) 0%,
+		var(--brand-light) 100%
+	);
+	border-radius: 50%;
 	color: var(--white);
-	line-height: 1;
 }
 
-.trust-label {
-	font-size: 0.875rem;
-	color: rgba(255, 255, 255, 0.8);
-	font-weight: 500;
+.usp-item h3 {
+	font-size: 1.25rem;
+	color: var(--brand);
+	margin-bottom: 0.75rem;
+	font-weight: 700;
 }
 
-.trust-divider {
-	width: 1px;
-	height: 40px;
-	background: rgba(255, 255, 255, 0.2);
+.usp-item p {
+	font-size: 0.95rem;
+	color: var(--text-secondary);
+	line-height: 1.6;
 }
 
 @media (max-width: 768px) {
 	.hero {
-		min-height: 70vh;
+		min-height: 500px;
 	}
 
 	.hero-inner {
-		padding: var(--space-md) 1rem;
-	}
-
-	.hero-copy {
-		max-width: 100%;
-		width: 100%;
+		padding: 4rem 0;
 	}
 
 	.hero-copy h1 {
@@ -219,46 +300,26 @@ const heroImg = new URL("../assets/portfolio/doors1.jpeg", import.meta.url)
 	}
 
 	.hero-subtitle {
-		font-size: 1rem;
+		font-size: 1.05rem;
 	}
 
 	.hero-actions {
 		flex-direction: column;
 		width: 100%;
-		gap: 0.75rem;
 	}
 
 	.hero-actions .btn {
+		width: 100%;
 		justify-content: center;
-		padding: 0.875rem 1rem;
-		font-size: 0.95rem;
 	}
 
-	.hero-trust {
-		gap: var(--space-sm);
+	.welcome-section {
+		padding: 3rem 0;
 	}
 
-	.trust-divider {
-		display: none;
-	}
-
-	.trust-number {
-		font-size: 1.5rem;
-	}
-
-	.trust-label {
-		font-size: 0.8rem;
-	}
-}
-
-@media (max-width: 480px) {
-	.hero-inner {
-		padding: var(--space-md) 0.75rem;
-	}
-
-	.hero-actions .btn {
-		padding: 0.75rem 0.875rem;
-		font-size: 0.9rem;
+	.usp-grid {
+		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
 }
 </style>

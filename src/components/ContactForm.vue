@@ -1,152 +1,205 @@
 <template>
-	<section id="contact" class="contact">
+	<section id="contact" class="contact section-grey">
 		<div class="container">
-			<div class="contact-header">
-				<h2>Contact us</h2>
+			<div class="section-header">
+				<h2>Get In Touch</h2>
 				<p class="lead">
-					Get in touch for a free quote or consultation
+					Request a free, no-obligation quote or speak to our team
+					about your project
 				</p>
 			</div>
 
 			<div class="contact-wrapper">
 				<div class="contact-info">
-					<div class="info-card">
-						<div class="info-icon">
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
-								></path>
-								<circle cx="12" cy="10" r="3"></circle>
-							</svg>
+					<h3>Contact Information</h3>
+					<div class="info-cards">
+						<div class="info-card">
+							<div class="info-icon">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"
+									></path>
+									<circle cx="12" cy="10" r="3"></circle>
+								</svg>
+							</div>
+							<div class="info-content">
+								<h4>Address</h4>
+								<p>
+									75 Hall Lane, West Winch<br />King's Lynn,
+									Norfolk<br />PE33 0PJ
+								</p>
+							</div>
 						</div>
-						<div>
-							<h4>Our Location</h4>
-							<p>
-								75 Hall Lane, West Winch<br />King's Lynn,
-								Norfolk, PE33 0PJ
-							</p>
-						</div>
-					</div>
 
-					<div class="info-card">
-						<div class="info-icon">
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
-								></path>
-							</svg>
+						<div class="info-card">
+							<div class="info-icon">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
+									></path>
+								</svg>
+							</div>
+							<div class="info-content">
+								<h4>Phone</h4>
+								<p>
+									<a href="tel:01553841175">01553 841 175</a>
+								</p>
+							</div>
 						</div>
-						<div>
-							<h4>Phone</h4>
-							<p>
-								<a href="tel:01553841175">01553 841 175</a>
-							</p>
-						</div>
-					</div>
 
-					<div class="info-card">
-						<div class="info-icon">
-							<svg
-								width="24"
-								height="24"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<circle cx="12" cy="12" r="10"></circle>
-								<polyline points="12 6 12 12 16 14"></polyline>
-							</svg>
+						<div class="info-card">
+							<div class="info-icon">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<path
+										d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+									></path>
+									<polyline
+										points="22,6 12,13 2,6"
+									></polyline>
+								</svg>
+							</div>
+							<div class="info-content">
+								<h4>Email</h4>
+								<p>
+									<a
+										href="mailto:info@smithandwilliamson.co.uk"
+										>info@smithandwilliamson.co.uk</a
+									>
+								</p>
+							</div>
 						</div>
-						<div>
-							<h4>Response Time</h4>
-							<p>
-								We respond to all enquiries within one business
-								day
-							</p>
+
+						<div class="info-card">
+							<div class="info-icon">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<circle cx="12" cy="12" r="10"></circle>
+									<polyline
+										points="12 6 12 12 16 14"
+									></polyline>
+								</svg>
+							</div>
+							<div class="info-content">
+								<h4>Opening Hours</h4>
+								<p>
+									Mon-Fri: 8:00 AM - 5:00 PM<br />Sat: 9:00 AM
+									- 1:00 PM
+								</p>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				<form class="contact-form" @submit.prevent="submitContact">
-					<div class="form-group">
-						<label for="name">Your name *</label>
-						<input
-							id="name"
-							v-model="name"
-							type="text"
-							placeholder="John Smith"
-							required
-						/>
-					</div>
-					<div class="form-group">
-						<label for="email">Email address *</label>
-						<input
-							id="email"
-							v-model="email"
-							type="email"
-							placeholder="john@example.com"
-							required
-						/>
-					</div>
-					<div class="form-group">
-						<label for="message">How can we help? *</label>
-						<textarea
-							id="message"
-							v-model="message"
-							placeholder="Tell us about your project..."
-							rows="5"
-							required
-						></textarea>
-					</div>
-					<div class="form-actions">
-						<button type="submit" class="btn primary">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<line x1="22" y1="2" x2="11" y2="13"></line>
-								<polygon
-									points="22 2 15 22 11 13 2 9 22 2"
-								></polygon>
-							</svg>
-							Send enquiry
-						</button>
-						<a class="btn ghost" :href="'tel:01553841175'">
-							<svg
-								width="20"
-								height="20"
-								viewBox="0 0 24 24"
-								fill="none"
-								stroke="currentColor"
-								stroke-width="2"
-							>
-								<path
-									d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"
-								></path>
-							</svg>
-							Call us now
-						</a>
-					</div>
-				</form>
+				<div class="form-wrapper">
+					<form class="contact-form" @submit.prevent="submitContact">
+						<h3>Send Us a Message</h3>
+						<div class="form-row">
+							<div class="form-group">
+								<label for="name">Name *</label>
+								<input
+									id="name"
+									v-model="name"
+									type="text"
+									placeholder="Your full name"
+									required
+								/>
+							</div>
+							<div class="form-group">
+								<label for="phone">Phone *</label>
+								<input
+									id="phone"
+									v-model="phone"
+									type="tel"
+									placeholder="Your phone number"
+									required
+								/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="email">Email *</label>
+							<input
+								id="email"
+								v-model="email"
+								type="email"
+								placeholder="your@email.com"
+								required
+							/>
+						</div>
+						<div class="form-group">
+							<label for="service">Service Required</label>
+							<select id="service" v-model="service">
+								<option value="">Please select...</option>
+								<option value="windows">Windows</option>
+								<option value="doors">Doors</option>
+								<option value="commercial">
+									Commercial Glazing
+								</option>
+								<option value="repairs">
+									Repairs & Maintenance
+								</option>
+								<option value="conservatories">
+									Conservatories
+								</option>
+								<option value="other">Other</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="message">Message *</label>
+							<textarea
+								id="message"
+								v-model="message"
+								placeholder="Tell us about your project or requirements..."
+								rows="6"
+								required
+							></textarea>
+						</div>
+						<div class="form-actions">
+							<button type="submit" class="btn primary">
+								<svg
+									width="20"
+									height="20"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+								>
+									<line x1="22" y1="2" x2="11" y2="13"></line>
+									<polygon
+										points="22 2 15 22 11 13 2 9 22 2"
+									></polygon>
+								</svg>
+								Send Message
+							</button>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -155,84 +208,99 @@
 <script setup lang="ts">
 import { ref } from "vue";
 const name = ref("");
+const phone = ref("");
 const email = ref("");
+const service = ref("");
 const message = ref("");
 
 function submitContact() {
 	const subject = encodeURIComponent(
-		"Website enquiry from " + (name.value || "Website")
+		"Website Enquiry from " + (name.value || "Customer")
 	);
 	const body = encodeURIComponent(
-		`Name: ${name.value}\nEmail: ${email.value}\n\n${message.value}`
+		`Name: ${name.value}\nPhone: ${phone.value}\nEmail: ${
+			email.value
+		}\nService Required: ${service.value || "Not specified"}\n\nMessage:\n${
+			message.value
+		}`
 	);
 	window.location.href = `mailto:info@smithandwilliamson.co.uk?subject=${subject}&body=${body}`;
 }
 </script>
 
 <style scoped>
-/* Modern contact section with split layout */
+/* Contact section - Eastern Frames inspired */
 .contact {
-	padding: var(--space-xl) 0;
-	background: linear-gradient(
-		180deg,
-		var(--glass-tint) 0%,
-		var(--white) 100%
-	);
+	padding: 5rem 0;
 }
 
-.contact-header {
+.section-header {
 	text-align: center;
-	max-width: 700px;
-	margin: 0 auto var(--space-lg);
+	max-width: 800px;
+	margin: 0 auto 3rem;
 }
 
-.contact-header h2 {
+.section-header h2 {
+	font-size: clamp(2rem, 4vw, 2.5rem);
 	color: var(--brand);
-	margin-bottom: var(--space-xs);
+	margin-bottom: 1rem;
+	font-weight: 700;
 }
 
 .lead {
 	font-size: 1.125rem;
 	color: var(--text-secondary);
+	line-height: 1.7;
 	margin: 0;
 }
 
 .contact-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1.5fr;
-	gap: var(--space-lg);
+	gap: 3rem;
 	align-items: start;
 }
 
-/* Contact info cards */
-.contact-info {
+/* Contact info section */
+.contact-info h3 {
+	font-size: 1.5rem;
+	color: var(--brand);
+	margin: 0 0 1.5rem;
+	font-weight: 700;
+}
+
+.info-cards {
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-md);
+	gap: 1.25rem;
 }
 
 .info-card {
 	background: var(--white);
-	padding: var(--space-md);
-	border-radius: var(--radius-lg);
+	padding: 1.5rem;
+	border-radius: var(--radius-md);
 	border: 1px solid var(--border-weak);
 	box-shadow: var(--shadow-sm);
 	display: flex;
-	gap: var(--space-sm);
+	gap: 1rem;
 	transition: all var(--transition-base);
 }
 
 .info-card:hover {
 	transform: translateX(4px);
 	box-shadow: var(--shadow-md);
-	border-color: var(--accent);
+	border-color: var(--brand);
 }
 
 .info-icon {
-	width: 48px;
-	height: 48px;
-	border-radius: var(--radius-md);
-	background: linear-gradient(135deg, var(--accent) 0%, var(--brand) 100%);
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: linear-gradient(
+		135deg,
+		var(--brand) 0%,
+		var(--brand-light) 100%
+	);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -240,45 +308,61 @@ function submitContact() {
 	flex-shrink: 0;
 }
 
-.info-card h4 {
-	margin: 0 0 var(--space-xs);
-	color: var(--brand);
-	font-size: 1.125rem;
+.info-content {
+	flex: 1;
 }
 
-.info-card p {
+.info-content h4 {
+	margin: 0 0 0.5rem;
+	color: var(--brand);
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+
+.info-content p {
 	margin: 0;
 	color: var(--text-secondary);
 	line-height: 1.6;
 }
 
-.info-card a {
-	color: var(--accent);
+.info-content a {
+	color: var(--accent-warm);
 	text-decoration: none;
 	font-weight: 600;
 	transition: color var(--transition-fast);
 }
 
-.info-card a:hover {
-	color: var(--brand);
+.info-content a:hover {
+	color: var(--accent-warm-hover);
 }
 
 /* Contact form */
-.contact-form {
+.form-wrapper {
 	background: var(--white);
-	padding: var(--space-lg);
-	border-radius: var(--radius-lg);
+	padding: 2.5rem;
+	border-radius: var(--radius-md);
 	border: 1px solid var(--border-weak);
 	box-shadow: var(--shadow-md);
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-md);
+}
+
+.contact-form h3 {
+	font-size: 1.5rem;
+	color: var(--brand);
+	margin: 0 0 2rem;
+	font-weight: 700;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.25rem;
 }
 
 .form-group {
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-xs);
+	gap: 0.5rem;
+	margin-bottom: 1.25rem;
 }
 
 .form-group label {
@@ -288,9 +372,10 @@ function submitContact() {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
 	padding: 0.875rem 1rem;
-	border-radius: var(--radius-md);
+	border-radius: var(--radius-sm);
 	border: 2px solid var(--border-weak);
 	background: var(--white);
 	color: var(--text);
@@ -300,15 +385,16 @@ function submitContact() {
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
 	outline: none;
-	border-color: var(--accent);
-	box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+	border-color: var(--brand);
+	box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
 }
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-	color: var(--muted-text);
+	color: var(--muted);
 }
 
 .form-group textarea {
@@ -317,48 +403,36 @@ function submitContact() {
 }
 
 .form-actions {
-	display: flex;
-	gap: var(--space-sm);
-	margin-top: var(--space-sm);
+	margin-top: 1rem;
 }
 
 .form-actions .btn {
-	flex: 1;
+	width: 100%;
+	justify-content: center;
 }
 
 @media (max-width: 968px) {
 	.contact-wrapper {
 		grid-template-columns: 1fr;
-		gap: var(--space-md);
+		gap: 2rem;
 	}
 
-	.contact-info {
-		order: 2;
+	.form-row {
+		grid-template-columns: 1fr;
 	}
 
-	.contact-form {
-		order: 1;
-		padding: var(--space-md);
-	}
-
-	.info-card {
-		flex-direction: row;
+	.form-wrapper {
+		padding: 2rem;
 	}
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
 	.contact {
-		padding: var(--space-lg) 0;
+		padding: 3rem 0;
 	}
 
-	.form-actions {
-		flex-direction: column;
-		gap: var(--space-xs);
-	}
-
-	.form-actions .btn {
-		padding: 0.75rem 1rem;
-		font-size: 0.9rem;
+	.form-wrapper {
+		padding: 1.5rem;
 	}
 }
 </style>

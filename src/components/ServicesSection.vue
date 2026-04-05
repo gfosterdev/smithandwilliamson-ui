@@ -1,23 +1,21 @@
 <template>
-	<section id="services" class="services">
+	<section id="services" class="services section-grey">
 		<div class="container">
-			<div class="services-header">
-				<h2>Our services</h2>
+			<div class="section-header">
+				<h2>Our Services</h2>
 				<p class="lead">
-					Professional window, door and glazing services for homes and
-					businesses — installed with care and warranty-backed.
+					Comprehensive glazing solutions for homes and businesses
+					across Norfolk. Quality products, expert installation,
+					competitive prices.
 				</p>
 			</div>
 
 			<div class="service-grid">
-				<article
-					class="service-card fade-in-up"
-					:style="{ '--delay': '80ms' }"
-				>
+				<article class="service-card">
 					<div class="service-icon">
 						<svg
-							width="40"
-							height="40"
+							width="48"
+							height="48"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -34,24 +32,73 @@
 							<path d="M15 3v18"></path>
 						</svg>
 					</div>
-					<div class="service-content">
-						<h3>Residential Windows</h3>
-						<p>
-							Double and triple-glazed windows, frames and bespoke
-							installations to improve comfort and reduce energy
-							bills.
-						</p>
-					</div>
+					<h3>Windows</h3>
+					<p>
+						uPVC, aluminium and timber windows. Double & triple
+						glazing. Casement, tilt & turn, sash windows. A+ energy
+						rated as standard.
+					</p>
+					<a href="#contact" class="service-link"
+						>Learn More
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
 				</article>
 
-				<article
-					class="service-card fade-in-up"
-					:style="{ '--delay': '160ms' }"
-				>
+				<article class="service-card">
 					<div class="service-icon">
 						<svg
-							width="40"
-							height="40"
+							width="48"
+							height="48"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<rect
+								x="3"
+								y="3"
+								width="18"
+								height="18"
+								rx="2"
+							></rect>
+							<path d="M3 9h18M9 21V9"></path>
+						</svg>
+					</div>
+					<h3>Doors</h3>
+					<p>
+						Composite front doors, French doors, patio & bi-fold
+						doors. Secure, stylish and thermally efficient. Wide
+						range of colors and designs.
+					</p>
+					<a href="#contact" class="service-link"
+						>Learn More
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
+				</article>
+
+				<article class="service-card">
+					<div class="service-icon">
+						<svg
+							width="48"
+							height="48"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -63,24 +110,32 @@
 							<polyline points="9 22 9 12 15 12 15 22"></polyline>
 						</svg>
 					</div>
-					<div class="service-content">
-						<h3>Commercial Glazing</h3>
-						<p>
-							Shopfronts, curtain walling, and specialist
-							commercial glazing with compliance and durability in
-							mind.
-						</p>
-					</div>
+					<h3>Commercial Glazing</h3>
+					<p>
+						Shopfronts, curtain walling, office partitions. Building
+						regulation compliant. Professional service from quote to
+						completion.
+					</p>
+					<a href="#contact" class="service-link"
+						>Learn More
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
 				</article>
 
-				<article
-					class="service-card fade-in-up"
-					:style="{ '--delay': '240ms' }"
-				>
+				<article class="service-card">
 					<div class="service-icon">
 						<svg
-							width="40"
-							height="40"
+							width="48"
+							height="48"
 							viewBox="0 0 24 24"
 							fill="none"
 							stroke="currentColor"
@@ -91,24 +146,117 @@
 							></path>
 						</svg>
 					</div>
-					<div class="service-content">
-						<h3>Repairs &amp; Replacements</h3>
-						<p>
-							Fast glass repairs, sealed unit replacements, and
-							emergency boarding to keep properties secure.
-						</p>
+					<h3>Repairs & Maintenance</h3>
+					<p>
+						Glass replacement, misted units, broken handles & locks.
+						Fast emergency boarding service. Keep your property
+						secure.
+					</p>
+					<a href="#contact" class="service-link"
+						>Learn More
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
+				</article>
+
+				<article class="service-card">
+					<div class="service-icon">
+						<svg
+							width="48"
+							height="48"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								d="M3 3h18a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V5a2 2 0 012-2z"
+							></path>
+							<path d="M3 9h18"></path>
+						</svg>
 					</div>
+					<h3>Conservatories</h3>
+					<p>
+						Traditional & modern conservatory designs. Orangeries &
+						garden rooms. Extend your living space with light-filled
+						rooms.
+					</p>
+					<a href="#contact" class="service-link"
+						>Learn More
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
+				</article>
+
+				<article class="service-card">
+					<div class="service-icon">
+						<svg
+							width="48"
+							height="48"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<circle cx="12" cy="12" r="10"></circle>
+							<path d="M8 12h8M12 8v8"></path>
+						</svg>
+					</div>
+					<h3>Bespoke Solutions</h3>
+					<p>
+						Custom glazing projects. Heritage & listed building
+						work. Specialist requirements? We can help with any
+						glazing challenge.
+					</p>
+					<a href="#contact" class="service-link"
+						>Learn More
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path d="M5 12h14M12 5l7 7-7 7"></path>
+						</svg>
+					</a>
 				</article>
 			</div>
+		</div>
+	</section>
 
-			<div class="section-divider"></div>
+	<!-- Accreditation section -->
+	<section class="accreditation-section section-white">
+		<div class="container">
+			<div class="section-header">
+				<h2>Quality Assured</h2>
+				<p class="lead">
+					All our work is backed by industry-leading accreditations
+					and comprehensive warranties
+				</p>
+			</div>
 
 			<div class="accreditation-grid">
-				<!-- FENSA item -->
-				<div class="acc-item fade-in-up" :style="{ '--delay': '80ms' }">
+				<div class="acc-card">
 					<div class="acc-logo">
 						<a
-							class="fensa-link"
 							href="https://www.fensa.org.uk"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -116,153 +264,110 @@
 							<img
 								src="../assets/fensa-badge-better.svg"
 								alt="FENSA accredited"
-								class="acc-logo-img"
 							/>
 						</a>
 					</div>
-					<div class="acc-content">
-						<div class="acc-title">FENSA Accredited Installer</div>
-						<div class="acc-text">
-							We operate in line with recognised industry
-							standards for compliance and energy-efficient
-							installations.
-						</div>
-					</div>
+					<h3>FENSA Accredited</h3>
+					<p>
+						Registered installer ensuring compliance with Building
+						Regulations for replacement windows and doors
+					</p>
 				</div>
 
-				<!-- GGFI item -->
-				<div
-					class="acc-item fade-in-up"
-					:style="{ '--delay': '160ms' }"
-				>
+				<div class="acc-card">
 					<div class="acc-logo">
 						<img
 							src="../assets/ggfi-warranted.svg"
 							alt="GGFI Warranted"
-							class="acc-logo-img"
 						/>
 					</div>
-					<div class="acc-content">
-						<div class="acc-title">GGFI Warranted</div>
-						<div class="acc-text">
-							Products warrantied through the Glass &amp; Glazing
-							Federation Insurance (GGFI).
-						</div>
+					<h3>GGFI Warranted</h3>
+					<p>
+						Products protected through Glass & Glazing Federation
+						Insurance scheme
+					</p>
+				</div>
+
+				<div class="acc-card">
+					<div class="acc-icon">
+						<svg
+							width="64"
+							height="64"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"
+							></path>
+							<path d="M9 11l2 2 4-4"></path>
+						</svg>
 					</div>
+					<h3>10 Year Guarantee</h3>
+					<p>
+						Comprehensive warranty on all installations giving you
+						complete peace of mind
+					</p>
 				</div>
 			</div>
 
-			<!-- Residence Collection installer details -->
-			<section class="residence">
-				<div class="residence-header">
+			<!-- Residence Collection section -->
+			<div class="residence-section">
+				<div class="residence-content">
 					<h3>Residence Collection Approved Installer</h3>
-				</div>
-				<p class="residence-blurb">
-					We are a family-run business with over 10 years' experience.
-					We are fully FENSA registered and warrant our products
-					through the GGFI. We specialise in Residence systems (R9,
-					R7, R2) for windows, doors, conservatories and orangeries.
-					We offer complete installations or supply-only at
-					competitive rates.
-				</p>
-
-				<div class="residence-branding" aria-hidden>
-					<div class="partners">
-						<span
-							class="logo"
-							data-tooltip="Residence R9"
-							tabindex="0"
-						>
-							<img
-								src="../assets/residence/r9.svg"
-								alt="Residence R9"
-								title="Residence R9"
-							/>
-						</span>
-						<span
-							class="logo"
-							data-tooltip="Residence R7"
-							tabindex="0"
-						>
-							<img
-								src="../assets/residence/r7.svg"
-								alt="Residence R7"
-								title="Residence R7"
-							/>
-						</span>
-						<span
-							class="logo"
-							data-tooltip="Residence R2"
-							tabindex="0"
-						>
-							<img
-								src="../assets/residence/r2.svg"
-								alt="Residence R2"
-								title="Residence R2"
-							/>
-						</span>
-						<span
-							class="logo"
-							data-tooltip="Residence RD"
-							tabindex="0"
-						>
-							<img
-								src="../assets/residence/rd.svg"
-								alt="Residence RD"
-								title="Residence RD"
-							/>
-						</span>
+					<p>
+						We specialize in premium Residence systems (R9, R7, R2)
+						for windows, doors, conservatories and orangeries. These
+						high-performance products combine authentic period
+						aesthetics with modern technology and energy efficiency.
+					</p>
+					<div class="residence-logos">
+						<img
+							src="../assets/residence/r9.svg"
+							alt="Residence R9"
+							title="Residence R9"
+						/>
+						<img
+							src="../assets/residence/r7.svg"
+							alt="Residence R7"
+							title="Residence R7"
+						/>
+						<img
+							src="../assets/residence/r2.svg"
+							alt="Residence R2"
+							title="Residence R2"
+						/>
+						<img
+							src="../assets/residence/rd.svg"
+							alt="Residence RD"
+							title="Residence RD"
+						/>
 					</div>
-
-					<div class="experience-grid">
-						<span
-							class="logo"
-							data-tooltip="100+ installations"
-							tabindex="0"
-						>
-							<img
-								src="../assets/residence/100-Installation.svg"
-								alt="100+ installations"
-								title="100+ installations"
-							/>
-						</span>
-						<span
-							class="logo"
-							data-tooltip="Conservation area installations"
-							tabindex="0"
-						>
-							<img
-								src="../assets/residence/5-Conservation.svg"
-								alt="Conservation area installations"
-								title="Conservation area installations"
-							/>
-						</span>
-						<span
-							class="logo"
-							data-tooltip="Sample window available"
-							tabindex="0"
-						>
-							<img
-								src="../assets/residence/Sample-window.svg"
-								alt="Sample window available"
-								title="Sample window available"
-							/>
-						</span>
-					</div>
-				</div>
-
-				<div class="residence-cta">
 					<a
-						class="btn primary"
 						href="https://www.residencecollection.co.uk/installers/smith-williamson/"
 						target="_blank"
 						rel="noopener noreferrer"
+						class="residence-link"
 					>
-						View our Residence profile
+						Visit Residence Collection Website
+						<svg
+							width="16"
+							height="16"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+							></path>
+							<polyline points="15 3 21 3 21 9"></polyline>
+							<line x1="10" y1="14" x2="21" y2="3"></line>
+						</svg>
 					</a>
-					<a class="btn ghost" href="#contact">Request a callback</a>
 				</div>
-			</section>
+			</div>
 		</div>
 	</section>
 </template>
@@ -272,423 +377,287 @@
 </script>
 
 <style scoped>
-/* Modern services section with professional card styling */
-.services {
-	padding: var(--space-xl) 0;
-	background: linear-gradient(
-		180deg,
-		var(--white) 0%,
-		var(--glass-tint) 100%
-	);
+/* Services section with clean Eastern Frames styling */
+.section-grey {
+	background: var(--surface-2);
+	padding: 5rem 0;
 }
 
-.services-header {
+.section-white {
+	background: var(--white);
+	padding: 5rem 0;
+}
+
+.section-header {
 	text-align: center;
-	max-width: 700px;
-	margin: 0 auto var(--space-lg);
+	max-width: 800px;
+	margin: 0 auto 3rem;
 }
 
-.services-header h2 {
+.section-header h2 {
+	font-size: clamp(2rem, 4vw, 2.5rem);
 	color: var(--brand);
-	margin-bottom: var(--space-sm);
+	margin-bottom: 1rem;
+	font-weight: 700;
 }
 
 .lead {
 	font-size: 1.125rem;
 	color: var(--text-secondary);
-	line-height: 1.6;
+	line-height: 1.7;
 	margin: 0;
 }
 
 .service-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-	gap: var(--space-md);
-	margin-bottom: var(--space-lg);
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
 }
 
 .service-card {
 	background: var(--white);
-	padding: var(--space-md);
-	border-radius: var(--radius-lg);
+	padding: 2rem;
+	border-radius: var(--radius-md);
 	border: 1px solid var(--border-weak);
-	box-shadow: var(--shadow-md);
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-sm);
+	box-shadow: var(--shadow-sm);
 	transition: all var(--transition-base);
-	position: relative;
-	overflow: hidden;
-}
-
-.service-card::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 4px;
-	background: linear-gradient(90deg, var(--accent), var(--accent-warm));
-	opacity: 0;
-	transition: opacity var(--transition-base);
+	text-align: center;
 }
 
 .service-card:hover {
-	transform: translateY(-8px);
-	box-shadow: var(--shadow-xl);
-	border-color: var(--accent);
-}
-
-.service-card:hover::before {
-	opacity: 1;
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-lg);
+	border-color: var(--brand);
 }
 
 .service-icon {
-	width: 64px;
-	height: 64px;
-	border-radius: var(--radius-md);
-	background: linear-gradient(135deg, var(--accent) 0%, var(--brand) 100%);
+	width: 80px;
+	height: 80px;
+	margin: 0 auto 1.5rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background: linear-gradient(
+		135deg,
+		var(--brand) 0%,
+		var(--brand-light) 100%
+	);
+	border-radius: 50%;
 	color: var(--white);
-	flex-shrink: 0;
-	box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
-	transition: all var(--transition-base);
+	transition: transform var(--transition-base);
 }
 
 .service-card:hover .service-icon {
-	transform: scale(1.1) rotate(5deg);
-	box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+	transform: scale(1.1);
 }
 
-.service-content h3 {
+.service-card h3 {
+	font-size: 1.5rem;
 	color: var(--brand);
-	margin: 0 0 var(--space-xs);
-	font-size: 1.375rem;
+	margin: 0 0 1rem;
+	font-weight: 700;
 }
 
-.service-content p {
+.service-card p {
 	color: var(--text-secondary);
-	line-height: 1.6;
-	margin: 0;
-	font-size: 1rem;
+	line-height: 1.7;
+	margin: 0 0 1.5rem;
 }
 
-/* Section divider */
-.section-divider {
-	height: 1px;
-	background: linear-gradient(
-		90deg,
-		transparent 0%,
-		var(--border-weak) 20%,
-		var(--border-weak) 80%,
-		transparent 100%
-	);
-	margin: var(--space-lg) 0;
-	position: relative;
+.service-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	color: var(--accent-warm);
+	text-decoration: none;
+	font-weight: 600;
+	transition: all var(--transition-fast);
 }
 
-.section-divider::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 8px;
-	height: 8px;
-	background: var(--accent);
-	border-radius: 50%;
-	box-shadow: 0 0 0 4px var(--white), 0 0 0 5px var(--border-weak);
+.service-link:hover {
+	gap: 0.75rem;
+	color: var(--accent-warm-hover);
+}
+
+.service-link svg {
+	transition: transform var(--transition-fast);
+}
+
+.service-link:hover svg {
+	transform: translateX(4px);
 }
 
 /* Accreditation section */
-.accreditation-section {
+.accreditation-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 2rem;
+}
+
+.acc-card {
 	background: var(--white);
-	padding: var(--space-md);
-	border-radius: var(--radius-lg);
+	padding: 2rem;
+	border-radius: var(--radius-md);
 	border: 1px solid var(--border-weak);
 	box-shadow: var(--shadow-sm);
-	margin-bottom: var(--space-lg);
-}
-
-.accreditation-grid {
-	display: flex;
-	gap: var(--space-lg);
-	justify-content: center;
-	align-items: center;
-	flex-wrap: nowrap; /* keep items in a single row */
-	overflow-x: auto;
-	padding-bottom: var(--space-sm);
-}
-
-.acc-item {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: var(--space-sm);
-	background: var(--white);
-	padding: var(--space-md);
-	border-radius: var(--radius-lg);
-	border: 1px solid var(--border-weak);
-	box-shadow: var(--shadow-md);
+	text-align: center;
 	transition: all var(--transition-base);
-	position: relative;
-	overflow: hidden;
 }
 
-.acc-item::before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 4px;
-	background: linear-gradient(90deg, var(--accent), var(--accent-warm));
-	opacity: 0;
-	transition: opacity var(--transition-base);
-}
-
-.acc-item:hover {
-	transform: translateY(-8px);
-	box-shadow: var(--shadow-xl);
-	border-color: var(--accent);
-}
-
-.acc-item:hover::before {
-	opacity: 1;
+.acc-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--shadow-lg);
+	border-color: var(--brand);
 }
 
 .acc-logo {
-	flex: 0 0 auto;
+	margin-bottom: 1.5rem;
 	display: flex;
 	align-items: center;
-	justify-content: flex-start;
-	width: 100%;
-	margin-bottom: var(--space-xs);
+	justify-content: center;
+	min-height: 80px;
 }
 
-.acc-logo-img {
-	/* max-height: 80px;
-	max-width: 120px; */
+.acc-logo img {
+	max-height: 80px;
 	width: auto;
-	height: auto;
-	display: block;
-	object-fit: contain;
 }
 
-.acc-content {
-	text-align: left;
-	max-width: 100%;
+.acc-icon {
+	margin: 0 auto 1.5rem;
+	width: 80px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(135deg, var(--accent) 0%, var(--brand) 100%);
+	border-radius: 50%;
+	color: var(--white);
 }
 
-.acc-title {
-	font-weight: 700;
+.acc-card h3 {
+	font-size: 1.25rem;
 	color: var(--brand);
-	margin: 0 0 var(--space-xs);
-	font-size: 1.375rem;
+	margin: 0 0 0.75rem;
+	font-weight: 700;
 }
 
-.acc-text {
+.acc-card p {
 	color: var(--text-secondary);
 	line-height: 1.6;
 	margin: 0;
-	font-size: 1rem;
 }
 
 /* Residence Collection section */
-.residence {
+.residence-section {
 	background: linear-gradient(
 		135deg,
 		var(--brand-dark) 0%,
 		var(--brand) 100%
 	);
-	padding: var(--space-lg) var(--space-md);
-	border-radius: var(--radius-lg);
+	padding: 3rem;
+	border-radius: var(--radius-md);
+	margin-top: 4rem;
 	color: var(--white);
+}
+
+.residence-content {
 	text-align: center;
-	box-shadow: var(--shadow-lg);
-	margin-top: var(--space-lg);
+	max-width: 900px;
+	margin: 0 auto 2rem;
 }
 
-.residence-header h3 {
+.residence-content h3 {
+	font-size: 2rem;
 	color: var(--white);
-	margin-bottom: var(--space-sm);
-	font-size: 1.75rem;
+	margin-bottom: 1rem;
+	font-weight: 700;
 }
 
-.residence-blurb {
-	max-width: 700px;
-	margin: 0 auto var(--space-md);
+.residence-content p {
+	font-size: 1.05rem;
 	color: rgba(255, 255, 255, 0.95);
 	line-height: 1.7;
-	font-size: 1.05rem;
+	margin-bottom: 2rem;
 }
 
-.residence-branding {
-	display: flex;
-	flex-direction: column;
-	gap: var(--space-md);
-	margin: var(--space-lg) 0;
-}
-
-.partners {
+.residence-logos {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: var(--space-md);
+	gap: 2rem;
 	flex-wrap: wrap;
+	padding: 2rem;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: var(--radius-md);
 }
 
-.partners img {
-	height: 48px;
+.residence-logos img {
+	height: 50px;
 	width: auto;
 	filter: brightness(0) invert(1);
 	opacity: 0.9;
 	transition: all var(--transition-base);
 }
 
-.partners img:hover {
+.residence-logos img:hover {
 	opacity: 1;
 	transform: scale(1.1);
 }
 
-.experience-grid {
-	display: flex;
-	justify-content: center;
+.residence-link {
+	display: inline-flex;
 	align-items: center;
-	gap: var(--space-lg);
-	flex-wrap: wrap;
-	padding: var(--space-md);
-	background: rgba(255, 255, 255, 0.1);
-	border-radius: var(--radius-md);
-	backdrop-filter: blur(10px);
+	gap: 0.5rem;
+	margin-top: 1.5rem;
+	padding: 0.875rem 1.75rem;
+	background: var(--white);
+	color: var(--brand);
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.95rem;
+	letter-spacing: 0.025em;
+	border-radius: var(--radius-sm);
+	transition: all var(--transition-base);
+	text-transform: uppercase;
 }
 
-.experience-grid img {
-	height: 56px;
-	width: auto;
-	opacity: 0.95;
-}
-
-/* Tooltip wrapper for logos */
-.logo {
-	position: relative;
-	display: inline-block;
-}
-
-.logo::after {
-	content: attr(data-tooltip);
-	position: absolute;
-	bottom: calc(100% + 8px);
-	left: 50%;
-	transform: translateX(-50%) translateY(4px);
-	background: rgba(0, 0, 0, 0.8);
-	color: #fff;
-	padding: 6px 8px;
-	border-radius: 6px;
-	font-size: 0.85rem;
-	white-space: nowrap;
-	opacity: 0;
-	pointer-events: none;
-	transition: opacity 0.15s ease, transform 0.15s ease;
-	z-index: 1000;
-}
-
-.logo:hover::after,
-.logo:focus::after {
-	opacity: 1;
-	transform: translateX(-50%) translateY(0);
-}
-
-.logo img {
-	display: block;
-}
-
-.residence-cta {
-	display: flex;
-	justify-content: center;
-	gap: var(--space-sm);
-	flex-wrap: wrap;
-	margin-top: var(--space-md);
-}
-
-.residence-cta .btn.primary {
+.residence-link:hover {
 	background: var(--accent-warm);
-	border-color: var(--accent-warm);
-}
-
-.residence-cta .btn.ghost {
-	background: transparent;
-	border-color: rgba(255, 255, 255, 0.8);
 	color: var(--white);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(255, 102, 0, 0.3);
 }
 
-.residence-cta .btn.ghost:hover {
-	background: rgba(255, 255, 255, 0.15);
-	border-color: var(--white);
+.residence-link svg {
+	transition: transform var(--transition-base);
+}
+
+.residence-link:hover svg {
+	transform: translateX(3px);
 }
 
 @media (max-width: 768px) {
-	.services {
-		padding: var(--space-lg) 0;
+	.section-grey,
+	.section-white {
+		padding: 3rem 0;
 	}
 
-	.service-grid {
-		grid-template-columns: 1fr;
-		gap: var(--space-sm);
-	}
-
-	.services-header h2 {
-		font-size: 1.75rem;
-	}
-
-	.lead {
-		font-size: 1rem;
-	}
-
-	.accreditation {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	/* allow accreditation items to wrap on small screens */
+	.service-grid,
 	.accreditation-grid {
-		flex-wrap: wrap;
+		grid-template-columns: 1fr;
 	}
 
-	.residence {
-		padding: var(--space-md) var(--space-sm);
-		margin-left: calc(-1 * var(--space-sm));
-		margin-right: calc(-1 * var(--space-sm));
-		border-radius: 0;
+	.residence-section {
+		padding: 2rem 1.5rem;
 	}
 
-	.partners {
-		gap: var(--space-sm);
+	.residence-logos {
+		gap: 1rem;
 	}
 
-	.partners img {
-		height: 36px;
-	}
-
-	.experience-grid {
-		gap: var(--space-sm);
-	}
-
-	.experience-grid img {
-		height: 44px;
-	}
-
-	.residence-cta {
-		flex-direction: column;
-		width: 100%;
-		gap: var(--space-xs);
-	}
-
-	.residence-cta .btn {
-		padding: 0.75rem 1rem;
-		font-size: 0.9rem;
+	.residence-logos img {
+		height: 40px;
 	}
 }
 </style>

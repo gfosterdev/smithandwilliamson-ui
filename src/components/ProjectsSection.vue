@@ -1,30 +1,30 @@
 <template>
-	<section id="projects" class="projects">
+	<section id="projects" class="projects section-white">
 		<div class="container">
-			<div class="projects-header">
-				<h2>Recent projects</h2>
+			<div class="section-header">
+				<h2>Latest Case Studies</h2>
 				<p class="lead">
-					Take a look at our portfolio of completed installations
+					View our recent installations showcasing quality workmanship
+					and attention to detail
 				</p>
 			</div>
 			<div class="project-grid">
-				<div
-					class="project-card fade-in-up"
+				<article
+					class="project-card"
 					v-for="(p, i) in projects"
 					:key="i"
-					:style="{ '--delay': `${i * 60}ms` }"
 					role="button"
 					tabindex="0"
 					@click="openModal(i)"
 					@keydown.enter="openModal(i)"
 				>
 					<div class="project-image-wrapper">
-						<img :src="p.img" :alt="p.title" />
+						<img :src="p.img" :alt="p.title" loading="lazy" />
 						<div class="project-overlay">
 							<div class="overlay-content">
 								<svg
-									width="32"
-									height="32"
+									width="40"
+									height="40"
 									viewBox="0 0 24 24"
 									fill="none"
 									stroke="currentColor"
@@ -34,12 +34,15 @@
 										d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"
 									></path>
 								</svg>
-								<span>View Project</span>
+								<span class="view-text">View Details</span>
 							</div>
 						</div>
 					</div>
-					<div class="project-caption">{{ p.title }}</div>
-				</div>
+					<div class="project-info">
+						<h3>{{ p.title }}</h3>
+						<p v-if="p.description">{{ p.description }}</p>
+					</div>
+				</article>
 			</div>
 
 			<ProjectModal
@@ -141,8 +144,57 @@ function closeModal() {
 	border-color: var(--accent);
 }
 
+<style scoped>
+/* Projects section - Eastern Frames case studies style */
+.projects {
+	padding: 5rem 0;
+}
+
+.section-header {
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto 3rem;
+}
+
+.section-header h2 {
+	font-size: clamp(2rem, 4vw, 2.5rem);
+	color: var(--brand);
+	margin-bottom: 1rem;
+	font-weight: 700;
+}
+
+.lead {
+	font-size: 1.125rem;
+	color: var(--text-secondary);
+	line-height: 1.7;
+	margin: 0;
+}
+
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2.5rem;
+	margin-bottom: 3rem;
+}
+
+.project-card {
+	background: var(--white);
+	border-radius: var(--radius-md);
+	overflow: hidden;
+	box-shadow: var(--shadow-md);
+	border: 1px solid var(--border-weak);
+	cursor: pointer;
+	transition: all var(--transition-base);
+}
+
+.project-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--shadow-xl);
+	border-color: var(--brand);
+}
+
 .project-card:focus {
-	outline: 2px solid var(--accent);
+	outline: 2px solid var(--brand);
 	outline-offset: 2px;
 }
 
@@ -150,6 +202,7 @@ function closeModal() {
 	position: relative;
 	overflow: hidden;
 	aspect-ratio: 4 / 3;
+	background: var(--surface-2);
 }
 
 .project-image-wrapper img {
@@ -161,7 +214,7 @@ function closeModal() {
 }
 
 .project-card:hover .project-image-wrapper img {
-	transform: scale(1.08);
+	transform: scale(1.1);
 }
 
 .project-overlay {
@@ -169,8 +222,8 @@ function closeModal() {
 	inset: 0;
 	background: linear-gradient(
 		180deg,
-		transparent 0%,
-		rgba(30, 58, 95, 0.7) 100%
+		rgba(0, 51, 102, 0.1) 0%,
+		rgba(0, 51, 102, 0.85) 100%
 	);
 	display: flex;
 	align-items: center;
@@ -187,9 +240,9 @@ function closeModal() {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 0.5rem;
+	gap: 0.75rem;
 	color: var(--white);
-	transform: translateY(10px);
+	transform: translateY(15px);
 	transition: transform var(--transition-base);
 }
 
@@ -198,39 +251,48 @@ function closeModal() {
 }
 
 .overlay-content svg {
-	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 
-.overlay-content span {
-	font-weight: 600;
-	font-size: 0.95rem;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+.view-text {
+	font-weight: 700;
+	font-size: 1.05rem;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
 }
 
-.project-caption {
-	padding: var(--space-sm) var(--space-md);
-	color: var(--text);
-	font-weight: 600;
-	font-size: 1rem;
+.project-info {
+	padding: 1.5rem;
 	background: var(--white);
+}
+
+.project-info h3 {
+	color: var(--brand);
+	font-size: 1.25rem;
+	margin: 0 0 0.5rem;
+	font-weight: 700;
+}
+
+.project-info p {
+	color: var(--text-secondary);
+	font-size: 0.95rem;
+	line-height: 1.6;
+	margin: 0;
 }
 
 @media (max-width: 768px) {
 	.projects {
-		padding: var(--space-lg) 0;
+		padding: 3rem 0;
 	}
 
 	.project-grid {
-		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-		gap: var(--space-sm);
+		grid-template-columns: 1fr;
+		gap: 2rem;
 	}
 
-	.projects-header h2 {
-		font-size: 1.75rem;
-	}
-
-	.lead {
-		font-size: 1rem;
+	.project-info {
+		padding: 1.25rem;
 	}
 }
 </style>
